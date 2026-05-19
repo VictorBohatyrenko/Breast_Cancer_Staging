@@ -1,1 +1,1 @@
-# MelanomaClassificationDiploma
+# Breast Cancer Staging Diploma
