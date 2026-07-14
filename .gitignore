@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Experiment tracking
+wandb/
+
+# Data & generated artifacts — НЕ пушимо
+CAMELYON/
+CAMELYON_test/
+features_uni2h_test/
+features_uni2h_training/
+patch_bench/
+patches_jpeg_level1/
+patches_jpeg_level1_training/
+TCGA-BRCA/
+*.png
+*.csv
+*.xlsx
+
+# IDE
+.vscode/
+.idea/
