@@ -1,0 +1,19 @@
+dataset: camelyon17
+n_class: 4
+
+train_dir: /data/bohatyrenko1/features_vitsdino_camelyon17_train
+test_dir: /data/bohatyrenko1/features_vitsdino_camelyon17_train
+splits_dir: /data/bohatyrenko1/EXPERIMENTS_2/ASMIL/splits_paper
+
+B: 1          # bag-level MIL: batch=1, бо N_patches різний по слайдах
+n_worker: 4
+pin_memory: true
+
+train_epoch: 20
+wd: 0.00001
+
+# lr schedule params, очікувані adjust_learning_rate() з utils.utils — підстав під свій варіант,
+# якщо там ще й warmup_epochs/min_lr тощо
+lr: 0.0001
+warmup_epoch: 5
+min_lr: 0.000001

@@ -1,0 +1,12 @@
+dataset: bracs
+n_class: 3
+B: 1
+splits_dir: /home/root_server/bohatyrenko/BRACS/splits
+train_dir: /data/bohatyrenko1/features_vits_dino_bracs
+test_dir: /data/bohatyrenko1/features_vits_dino_bracs
+train_epoch: 30
+warmup_epoch: 0
+wd: 1.0e-05
+min_lr: 1.0e-06
+n_worker: 4
+pin_memory: true

@@ -1,0 +1,24 @@
+train=389  val=62  test=86
+/home/root_server/.local/lib/python3.11/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Tier1_5Module: 1,110,411 тренованих параметрів (context_mode=attn); Tier1 заморожений
+Tier2 РОЗМОРОЖЕНО: 594,323 тренованих параметрів, lr=1e-05
+epoch   1  loss=0.4741 (main=0.4480 aux=0.5208)  train_acc=0.8586  grad_norm=0.3099  val_acc=0.7097  val_f1=0.5998  (n=62, skip=0)
+  -> новий найкращий val_f1=0.5998, збережено у ckpt/bracs_v3_seed6/checkpoint-best.pth
+epoch   2  loss=0.4254 (main=0.4035 aux=0.4380)  train_acc=0.8638  grad_norm=0.2248  val_acc=0.6774  val_f1=0.5762  (n=62, skip=0)
+epoch   3  loss=0.4082 (main=0.3858 aux=0.4482)  train_acc=0.8612  grad_norm=0.2225  val_acc=0.7097  val_f1=0.6008  (n=62, skip=0)
+  -> новий найкращий val_f1=0.6008, збережено у ckpt/bracs_v3_seed6/checkpoint-best.pth
+epoch   4  loss=0.3979 (main=0.3776 aux=0.4048)  train_acc=0.8663  grad_norm=0.2031  val_acc=0.6613  val_f1=0.5588  (n=62, skip=0)
+epoch   5  loss=0.3907 (main=0.3720 aux=0.3727)  train_acc=0.8740  grad_norm=0.2046  val_acc=0.6774  val_f1=0.5730  (n=62, skip=0)
+epoch   6  loss=0.3973 (main=0.3767 aux=0.4131)  train_acc=0.8715  grad_norm=0.2244  val_acc=0.6935  val_f1=0.5870  (n=62, skip=0)
+epoch   7  loss=0.3870 (main=0.3683 aux=0.3739)  train_acc=0.8689  grad_norm=0.261  val_acc=0.6774  val_f1=0.5746  (n=62, skip=0)
+epoch   8  loss=0.3923 (main=0.3672 aux=0.5028)  train_acc=0.8663  grad_norm=0.3164  val_acc=0.6774  val_f1=0.5731  (n=62, skip=0)
+epoch   9  loss=0.3754 (main=0.3552 aux=0.4046)  train_acc=0.8740  grad_norm=0.2849  val_acc=0.6774  val_f1=0.5762  (n=62, skip=0)
+epoch  10  loss=0.3727 (main=0.3535 aux=0.3840)  train_acc=0.8715  grad_norm=0.3085  val_acc=0.6935  val_f1=0.5861  (n=62, skip=0)
+epoch  11  loss=0.3612 (main=0.3429 aux=0.3654)  train_acc=0.8766  grad_norm=0.3065  val_acc=0.6935  val_f1=0.5885  (n=62, skip=0)
+  -> рання зупинка: 8 епох без покращення val_f1
+
+=== ФІНАЛЬНИЙ TEST (найкращий за val_f1=0.6008, epoch=3) ===
+test_acc=0.7093  test_f1=0.6860  (n=86, skip=0)
+
+Порівняй ці test_acc/test_f1 з рядками cheap-only / expensive-only у таблиці документа проєкту -- це і є число для рядка 'наш DTFD-ASMIL v2.5 (Tier1.5)'.

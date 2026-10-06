@@ -1,0 +1,21 @@
+train=389  val=62  test=86
+/home/root_server/.local/lib/python3.11/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Tier1_5Module: 1,110,411 тренованих параметрів (context_mode=attn); Tier1 заморожений
+Tier2 РОЗМОРОЖЕНО: 594,323 тренованих параметрів, lr=1e-05
+epoch   1  loss=0.3553 (main=0.3339 aux=0.4276)  train_acc=0.8997  grad_norm=0.6245  val_acc=0.7258  val_f1=0.6535  (n=62, skip=0)
+  -> новий найкращий val_f1=0.6535, збережено у ckpt/bracs_k8_seed1/checkpoint-best.pth
+epoch   2  loss=0.2827 (main=0.2639 aux=0.3764)  train_acc=0.9229  grad_norm=0.4785  val_acc=0.7258  val_f1=0.6535  (n=62, skip=0)
+epoch   3  loss=0.2765 (main=0.2582 aux=0.3672)  train_acc=0.9023  grad_norm=0.5201  val_acc=0.7419  val_f1=0.6496  (n=62, skip=0)
+epoch   4  loss=0.2520 (main=0.2306 aux=0.4288)  train_acc=0.9203  grad_norm=0.4821  val_acc=0.7258  val_f1=0.6131  (n=62, skip=0)
+epoch   5  loss=0.2497 (main=0.2306 aux=0.3821)  train_acc=0.9126  grad_norm=0.4678  val_acc=0.6774  val_f1=0.6105  (n=62, skip=0)
+epoch   6  loss=0.2527 (main=0.2340 aux=0.3722)  train_acc=0.9152  grad_norm=0.5185  val_acc=0.7258  val_f1=0.6131  (n=62, skip=0)
+epoch   7  loss=0.2499 (main=0.2310 aux=0.3784)  train_acc=0.9177  grad_norm=0.5057  val_acc=0.6935  val_f1=0.6085  (n=62, skip=0)
+epoch   8  loss=0.2362 (main=0.2153 aux=0.4181)  train_acc=0.9229  grad_norm=0.4265  val_acc=0.7258  val_f1=0.6131  (n=62, skip=0)
+epoch   9  loss=0.2357 (main=0.2166 aux=0.3821)  train_acc=0.9306  grad_norm=0.49  val_acc=0.6774  val_f1=0.5762  (n=62, skip=0)
+  -> рання зупинка: 8 епох без покращення val_f1
+
+=== ФІНАЛЬНИЙ TEST (найкращий за val_f1=0.6535, epoch=1) ===
+test_acc=0.6860  test_f1=0.6715  (n=86, skip=0)
+
+Порівняй ці test_acc/test_f1 з рядками cheap-only / expensive-only у таблиці документа проєкту -- це і є число для рядка 'наш DTFD-ASMIL v2.5 (Tier1.5)'.

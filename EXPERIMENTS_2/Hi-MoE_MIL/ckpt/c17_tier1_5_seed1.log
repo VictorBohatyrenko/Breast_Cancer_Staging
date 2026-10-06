@@ -1,0 +1,18 @@
+train=266  val=29  test=197
+Tier1_5Module: 1,006,860 тренованих параметрів (cheap_model заморожений)
+epoch   1  loss=0.3399 (main=0.3092 aux=0.6133)  train_acc=0.9098  grad_norm=1.482  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+  -> новий найкращий val_f1=0.5305, збережено у ckpt/c17_tier1_5_seed1/checkpoint-best.pth
+epoch   2  loss=0.2708 (main=0.2466 aux=0.4832)  train_acc=0.9135  grad_norm=1.441  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+epoch   3  loss=0.2689 (main=0.2484 aux=0.4104)  train_acc=0.9060  grad_norm=1.405  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+epoch   4  loss=0.2358 (main=0.2173 aux=0.3692)  train_acc=0.9286  grad_norm=1.125  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+epoch   5  loss=0.2464 (main=0.2284 aux=0.3610)  train_acc=0.9361  grad_norm=1.324  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+epoch   6  loss=0.2071 (main=0.1913 aux=0.3148)  train_acc=0.9361  grad_norm=1.25  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+epoch   7  loss=0.2334 (main=0.2175 aux=0.3175)  train_acc=0.9286  grad_norm=1.587  val_acc=0.7241  val_f1=0.5168  (n=29, skip=0)
+epoch   8  loss=0.2099 (main=0.1953 aux=0.2930)  train_acc=0.9398  grad_norm=1.319  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+epoch   9  loss=0.2039 (main=0.1889 aux=0.3009)  train_acc=0.9361  grad_norm=1.862  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+  -> рання зупинка: 8 епох без покращення val_f1
+
+=== ФІНАЛЬНИЙ TEST (найкращий за val_f1=0.5305, epoch=1) ===
+test_acc=0.7970  test_f1=0.5772  (n=197, skip=0)
+
+Порівняй ці test_acc/test_f1 з рядками cheap-only / expensive-only у таблиці документа проєкту -- це і є число для рядка 'наш DTFD-ASMIL v2.5 (Tier1.5)'.

@@ -1,0 +1,28 @@
+слайдів: 86, сіди: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+======================================================================
+(A) ШУМОВА СТЕЛЯ: oracle між моделями з різними сідами
+/home/root_server/.local/lib/python3.11/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+  cheap-vs-cheap (різні сіди, 45 пар): acc=0.6837  oracle=0.7555  rescue(одного іншим)=0.0685
+  exp-vs-exp (різні сіди, 45 пар): acc=0.7198  oracle=0.7919  rescue(одного іншим)=0.0675
+  cheap-vs-exp (той самий сід): oracle=0.8225  rescue=0.1388
+  Інтерпретація: якщо cheap-vs-cheap oracle майже дорівнює cheap-vs-exp, то 'стеля' -- це шум, а не специфічна комплементарність UNI2h.
+======================================================================
+(B) Чи робить Tier1.5 щось: однакове bag-розбиття, тест
+seed 1: acc cheap=0.698 v3=0.663 v3_noesc=0.663 ctrl=0.674 | flip(v3 vs v3_noesc)=0.023 flip(v3 vs ctrl)=0.012 flip(ctrl vs cheap)=0.070 | ||delta||/||feat||=0.1277
+seed 2: acc cheap=0.686 v3=0.674 v3_noesc=0.674 ctrl=0.686 | flip(v3 vs v3_noesc)=0.000 flip(v3 vs ctrl)=0.047 flip(ctrl vs cheap)=0.023 | ||delta||/||feat||=0.1432
+seed 3: acc cheap=0.674 v3=0.663 v3_noesc=0.651 ctrl=0.686 | flip(v3 vs v3_noesc)=0.035 flip(v3 vs ctrl)=0.070 flip(ctrl vs cheap)=0.105 | ||delta||/||feat||=0.1208
+seed 4: acc cheap=0.709 v3=0.709 v3_noesc=0.698 ctrl=0.709 | flip(v3 vs v3_noesc)=0.012 flip(v3 vs ctrl)=0.023 flip(ctrl vs cheap)=0.023 | ||delta||/||feat||=0.1145
+seed 5: acc cheap=0.663 v3=0.674 v3_noesc=0.686 ctrl=0.663 | flip(v3 vs v3_noesc)=0.012 flip(v3 vs ctrl)=0.035 flip(ctrl vs cheap)=0.023 | ||delta||/||feat||=0.1056
+seed 6: acc cheap=0.698 v3=0.709 v3_noesc=0.709 ctrl=0.698 | flip(v3 vs v3_noesc)=0.000 flip(v3 vs ctrl)=0.023 flip(ctrl vs cheap)=0.047 | ||delta||/||feat||=0.1162
+seed 7: acc cheap=0.663 v3=0.674 v3_noesc=0.698 ctrl=0.686 | flip(v3 vs v3_noesc)=0.023 flip(v3 vs ctrl)=0.035 flip(ctrl vs cheap)=0.081 | ||delta||/||feat||=0.0775
+seed 8: acc cheap=0.698 v3=0.709 v3_noesc=0.709 ctrl=0.721 | flip(v3 vs v3_noesc)=0.000 flip(v3 vs ctrl)=0.023 flip(ctrl vs cheap)=0.105 | ||delta||/||feat||=0.0467
+seed 9: acc cheap=0.651 v3=0.721 v3_noesc=0.709 ctrl=0.698 | flip(v3 vs v3_noesc)=0.012 flip(v3 vs ctrl)=0.035 flip(ctrl vs cheap)=0.186 | ||delta||/||feat||=0.0892
+seed10: acc cheap=0.674 v3=0.663 v3_noesc=0.686 ctrl=0.663 | flip(v3 vs v3_noesc)=0.023 flip(v3 vs ctrl)=0.000 flip(ctrl vs cheap)=0.058 | ||delta||/||feat||=0.0758
+
+  СЕРЕДНЄ ПО СІДАХ:
+  acc: cheap=0.6814  v3=0.6860  v3_noesc=0.6884  ctrl=0.6884
+  частка слайдів зі зміненим прогнозом через delta (v3 vs v3_noesc): 0.0140
+  v3 vs ctrl: 0.0302   ctrl vs cheap (ефект fine-tune Tier2): 0.0721
+  відносна норма delta: 0.1017
+  Інтерпретація: flip(v3 vs v3_noesc)≈0 і delta_ratio≈0 => модуль лишився тотожністю (мертвий). Якщо flip помітний, але acc не росте -- delta змінює прогнози, але не в правильний бік.

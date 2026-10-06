@@ -1,0 +1,17 @@
+train=389  val=62  test=86
+/home/root_server/.local/lib/python3.11/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Tier1_5Module: 1,110,411 тренованих параметрів (context_mode=attn); Tier1 заморожений
+Tier2 РОЗМОРОЖЕНО: 594,323 тренованих параметрів, lr=1e-05
+epoch   1  loss=0.3701 (main=0.3486 aux=0.4298)  train_acc=0.8946  grad_norm=0.5125  val_acc=0.6774  val_f1=0.6010  (n=62, skip=0)
+  -> новий найкращий val_f1=0.6010, збережено у ckpt/bracs_k8_seed3/checkpoint-best.pth
+epoch   2  loss=0.3074 (main=0.2882 aux=0.3834)  train_acc=0.8895  grad_norm=0.5426  val_acc=0.6935  val_f1=0.6113  (n=62, skip=0)
+  -> новий найкращий val_f1=0.6113, збережено у ckpt/bracs_k8_seed3/checkpoint-best.pth
+epoch   3  loss=0.2819 (main=0.2632 aux=0.3736)  train_acc=0.9023  grad_norm=0.5184  val_acc=0.7258  val_f1=0.6144  (n=62, skip=0)
+  -> новий найкращий val_f1=0.6144, збережено у ckpt/bracs_k8_seed3/checkpoint-best.pth
+epoch   4  loss=0.2768 (main=0.2560 aux=0.4169)  train_acc=0.8946  grad_norm=0.5575  val_acc=0.6774  val_f1=0.5782  (n=62, skip=0)
+epoch   5  loss=0.2851 (main=0.2648 aux=0.4056)  train_acc=0.9100  grad_norm=0.4997  val_acc=0.7258  val_f1=0.6144  (n=62, skip=0)
+epoch   6  loss=0.2659 (main=0.2485 aux=0.3471)  train_acc=0.9023  grad_norm=0.4667  val_acc=0.6774  val_f1=0.6012  (n=62, skip=0)
+epoch   7  loss=0.2649 (main=0.2459 aux=0.3812)  train_acc=0.9126  grad_norm=0.4536  val_acc=0.7419  val_f1=0.6270  (n=62, skip=0)
+  -> новий найкращий val_f1=0.6270, збережено у ckpt/bracs_k8_seed3/checkpoint-best.pth
+epoch   8  loss=0.2581 (main=0.2409 aux=0.3426)  train_acc=0.9100  grad_norm=0.4699  val_acc=0.7258  val_f1=0.6131  (n=62, skip=0)

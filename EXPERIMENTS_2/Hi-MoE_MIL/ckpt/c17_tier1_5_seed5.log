@@ -1,0 +1,23 @@
+train=266  val=29  test=197
+Tier1_5Module: 1,006,860 тренованих параметрів (cheap_model заморожений)
+epoch   1  loss=0.3336 (main=0.3016 aux=0.6394)  train_acc=0.9173  grad_norm=1.526  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+  -> новий найкращий val_f1=0.5238, збережено у ckpt/c17_tier1_5_seed5/checkpoint-best.pth
+epoch   2  loss=0.2922 (main=0.2684 aux=0.4765)  train_acc=0.9211  grad_norm=1.553  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+epoch   3  loss=0.2592 (main=0.2371 aux=0.4431)  train_acc=0.9398  grad_norm=1.277  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+epoch   4  loss=0.2595 (main=0.2390 aux=0.4087)  train_acc=0.9323  grad_norm=1.224  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+epoch   5  loss=0.2293 (main=0.2106 aux=0.3742)  train_acc=0.9323  grad_norm=1.388  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+  -> новий найкращий val_f1=0.5305, збережено у ckpt/c17_tier1_5_seed5/checkpoint-best.pth
+epoch   6  loss=0.2187 (main=0.2001 aux=0.3729)  train_acc=0.9286  grad_norm=1.406  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+epoch   7  loss=0.2116 (main=0.1937 aux=0.3594)  train_acc=0.9323  grad_norm=1.36  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+epoch   8  loss=0.1877 (main=0.1706 aux=0.3434)  train_acc=0.9474  grad_norm=1.517  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+epoch   9  loss=0.1836 (main=0.1669 aux=0.3345)  train_acc=0.9361  grad_norm=1.597  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+epoch  10  loss=0.1760 (main=0.1595 aux=0.3297)  train_acc=0.9398  grad_norm=1.867  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+epoch  11  loss=0.1445 (main=0.1300 aux=0.2888)  train_acc=0.9586  grad_norm=1.54  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+epoch  12  loss=0.1225 (main=0.1091 aux=0.2686)  train_acc=0.9474  grad_norm=1.457  val_acc=0.7931  val_f1=0.5305  (n=29, skip=0)
+epoch  13  loss=0.1155 (main=0.1014 aux=0.2822)  train_acc=0.9662  grad_norm=1.431  val_acc=0.7586  val_f1=0.5238  (n=29, skip=0)
+  -> рання зупинка: 8 епох без покращення val_f1
+
+=== ФІНАЛЬНИЙ TEST (найкращий за val_f1=0.5305, epoch=5) ===
+test_acc=0.8274  test_f1=0.6188  (n=197, skip=0)
+
+Порівняй ці test_acc/test_f1 з рядками cheap-only / expensive-only у таблиці документа проєкту -- це і є число для рядка 'наш DTFD-ASMIL v2.5 (Tier1.5)'.

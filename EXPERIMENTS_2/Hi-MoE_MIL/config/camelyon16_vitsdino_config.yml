@@ -1,0 +1,12 @@
+dataset: camelyon16
+n_class: 2
+B: 1
+splits_dir: /data/bohatyrenko1/EXPERIMENTS_2/ASMIL_repo/camelyon16_splits_binary
+train_dir: /data/bohatyrenko1/features_vitsdino_camelyon16_v2
+test_dir: /data/bohatyrenko1/features_vitsdino_camelyon16_v2
+train_epoch: 30
+warmup_epoch: 5
+wd: 1.0e-05
+min_lr: 1.0e-06
+n_worker: 4
+pin_memory: true

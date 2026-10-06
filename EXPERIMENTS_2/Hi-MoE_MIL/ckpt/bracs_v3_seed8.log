@@ -1,0 +1,23 @@
+train=389  val=62  test=86
+/home/root_server/.local/lib/python3.11/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Tier1_5Module: 1,110,411 тренованих параметрів (context_mode=attn); Tier1 заморожений
+Tier2 РОЗМОРОЖЕНО: 594,323 тренованих параметрів, lr=1e-05
+epoch   1  loss=0.4665 (main=0.4398 aux=0.5320)  train_acc=0.8458  grad_norm=0.3182  val_acc=0.7097  val_f1=0.6269  (n=62, skip=0)
+  -> новий найкращий val_f1=0.6269, збережено у ckpt/bracs_v3_seed8/checkpoint-best.pth
+epoch   2  loss=0.4356 (main=0.4125 aux=0.4607)  train_acc=0.8458  grad_norm=0.2721  val_acc=0.7419  val_f1=0.6503  (n=62, skip=0)
+  -> новий найкращий val_f1=0.6503, збережено у ckpt/bracs_v3_seed8/checkpoint-best.pth
+epoch   3  loss=0.4215 (main=0.3996 aux=0.4370)  train_acc=0.8560  grad_norm=0.2507  val_acc=0.7258  val_f1=0.6385  (n=62, skip=0)
+epoch   4  loss=0.4066 (main=0.3849 aux=0.4340)  train_acc=0.8663  grad_norm=0.2486  val_acc=0.7419  val_f1=0.6503  (n=62, skip=0)
+epoch   5  loss=0.4098 (main=0.3893 aux=0.4101)  train_acc=0.8535  grad_norm=0.2716  val_acc=0.7419  val_f1=0.6503  (n=62, skip=0)
+epoch   6  loss=0.3970 (main=0.3757 aux=0.4258)  train_acc=0.8663  grad_norm=0.2995  val_acc=0.7419  val_f1=0.6503  (n=62, skip=0)
+epoch   7  loss=0.3949 (main=0.3750 aux=0.3973)  train_acc=0.8612  grad_norm=0.2712  val_acc=0.7419  val_f1=0.6503  (n=62, skip=0)
+epoch   8  loss=0.3908 (main=0.3709 aux=0.3993)  train_acc=0.8612  grad_norm=0.3091  val_acc=0.7097  val_f1=0.6264  (n=62, skip=0)
+epoch   9  loss=0.3781 (main=0.3583 aux=0.3952)  train_acc=0.8638  grad_norm=0.3022  val_acc=0.7419  val_f1=0.6503  (n=62, skip=0)
+epoch  10  loss=0.3758 (main=0.3561 aux=0.3946)  train_acc=0.8689  grad_norm=0.3511  val_acc=0.7419  val_f1=0.6503  (n=62, skip=0)
+  -> рання зупинка: 8 епох без покращення val_f1
+
+=== ФІНАЛЬНИЙ TEST (найкращий за val_f1=0.6503, epoch=2) ===
+test_acc=0.7093  test_f1=0.6926  (n=86, skip=0)
+
+Порівняй ці test_acc/test_f1 з рядками cheap-only / expensive-only у таблиці документа проєкту -- це і є число для рядка 'наш DTFD-ASMIL v2.5 (Tier1.5)'.
