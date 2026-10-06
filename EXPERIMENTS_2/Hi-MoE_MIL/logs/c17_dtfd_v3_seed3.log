@@ -1,0 +1,450 @@
+wandb: Tracking run with wandb version 0.28.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /data/bohatyrenko1/EXPERIMENTS_2/Hi-MoE_MIL/wandb/offline-run-20260925_125802-qblboyfi
+wandb: View this run in the terminal with `wandb leet`
+Used config (DTFD-ASMIL v2):
+{'B': 1,
+ 'D_feat': 384,
+ 'D_inner': 128,
+ 'M': None,
+ 'ckpt_dir': 'ckpt/c17_dtfd_v3_seed3',
+ 'config': 'config/camelyon17_vitsdino_config_20ep.yml',
+ 'dataset': 'camelyon17',
+ 'lr': 0.0001,
+ 'min_lr': 1e-06,
+ 'n_class': 4,
+ 'n_token': 8,
+ 'n_worker': 4,
+ 'pin_memory': True,
+ 'pretrain': 'medical_ssl',
+ 'seed': 3,
+ 'splits_dir': '/data/bohatyrenko1/EXPERIMENTS_2/ASMIL/splits_paper',
+ 'test_dir': '/data/bohatyrenko1/features_vitsdino_camelyon17_train',
+ 'tier1_weight': 0.1,
+ 'tier2_D_inner': None,
+ 'tier2_n_heads': 4,
+ 'tier2_n_layers': 2,
+ 'train_dir': '/data/bohatyrenko1/features_vitsdino_camelyon17_train',
+ 'train_epoch': 20,
+ 'wandb_mode': 'offline',
+ 'warmup_epoch': 5,
+ 'wd': 1e-05}
+M (псевдо-bags) = 8, tier1_weight = 0.1
+Class weights: [0.3757062256336212, 3.694444417953491, 1.6219512224197388, 2.2166666984558105]
+Epoch: [0] [  0/266] eta: 0:02:22 lr: 0.000000 tier1_loss: 1.4662 (1.4662) tier2_loss: 2.4069 (2.4069) time: 0.5357 data: 0.0885 max mem: 102
+Epoch: [0] [100/266] eta: 0:00:18 lr: 0.000008 tier1_loss: 1.4171 (1.4055) tier2_loss: 0.8497 (1.4470) time: 0.1113 data: 0.0001 max mem: 305
+Epoch: [0] [200/266] eta: 0:00:07 lr: 0.000015 tier1_loss: 1.1072 (1.3612) tier2_loss: 0.0801 (1.4076) time: 0.1227 data: 0.0001 max mem: 326
+Epoch: [0] [265/266] eta: 0:00:00 lr: 0.000020 tier1_loss: 0.6773 (1.2916) tier2_loss: 0.0384 (1.3754) time: 0.1060 data: 0.0001 max mem: 326
+Epoch: [0] Total time: 0:00:31 (31.0162 s / it)
+Val [ 0/29] eta: 0:00:05 loss: 0.0397 (0.0397) acc1: 100.0000 (100.0000) time: 0.1782 data: 0.1197 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0351 (1.4543) acc1: 100.0000 (68.9655) time: 0.0274 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9724 s / it)
+* Acc@1 68.966 loss 1.454 auroc 0.497 f1_score 0.204
+  per-class F1 (Val): {'negative': np.float32(0.816), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=68.966 f1_macro=0.204
+Test [  0/197] eta: 0:00:31 loss: 4.4200 (4.4200) acc1: 0.0000 (0.0000) time: 0.1574 data: 0.1164 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.0351 (1.8304) acc1: 100.0000 (59.4059) time: 0.0277 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0331 (1.7458) acc1: 100.0000 (61.4213) time: 0.0271 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7199 s / it)
+* Acc@1 61.421 loss 1.746 auroc 0.614 f1_score 0.190
+  per-class F1 (Test): {'negative': np.float32(0.761), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=61.421 f1_macro=0.190
+
+Epoch: [1] [  0/266] eta: 0:00:58 lr: 0.000020 tier1_loss: 0.6956 (0.6956) tier2_loss: 0.0378 (0.0378) time: 0.2205 data: 0.1096 max mem: 326
+Epoch: [1] [100/266] eta: 0:00:17 lr: 0.000028 tier1_loss: 0.3264 (0.9284) tier2_loss: 0.0372 (1.1903) time: 0.1093 data: 0.0001 max mem: 326
+Epoch: [1] [200/266] eta: 0:00:07 lr: 0.000035 tier1_loss: 0.2050 (0.9887) tier2_loss: 0.0846 (1.2654) time: 0.1080 data: 0.0001 max mem: 326
+Epoch: [1] [265/266] eta: 0:00:00 lr: 0.000040 tier1_loss: 2.8089 (1.0571) tier2_loss: 2.3330 (1.3099) time: 0.1082 data: 0.0001 max mem: 326
+Epoch: [1] Total time: 0:00:29 (29.0771 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.1625 (0.1625) acc1: 100.0000 (100.0000) time: 0.1612 data: 0.1217 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.1619 (1.0776) acc1: 100.0000 (68.9655) time: 0.0272 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9716 s / it)
+* Acc@1 68.966 loss 1.078 auroc 0.542 f1_score 0.204
+  per-class F1 (Val): {'negative': np.float32(0.816), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=68.966 f1_macro=0.204
+Test [  0/197] eta: 0:00:31 loss: 2.6015 (2.6015) acc1: 0.0000 (0.0000) time: 0.1615 data: 0.1234 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.1540 (1.3205) acc1: 100.0000 (59.4059) time: 0.0279 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.1259 (1.2636) acc1: 100.0000 (61.4213) time: 0.0264 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.8469 s / it)
+* Acc@1 61.421 loss 1.264 auroc 0.663 f1_score 0.190
+  per-class F1 (Test): {'negative': np.float32(0.761), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=61.421 f1_macro=0.190
+
+Epoch: [2] [  0/266] eta: 0:01:06 lr: 0.000040 tier1_loss: 0.1654 (0.1654) tier2_loss: 0.1847 (0.1847) time: 0.2505 data: 0.1088 max mem: 326
+Epoch: [2] [100/266] eta: 0:00:17 lr: 0.000048 tier1_loss: 0.1619 (1.2002) tier2_loss: 0.5580 (1.2483) time: 0.1076 data: 0.0001 max mem: 326
+Epoch: [2] [200/266] eta: 0:00:07 lr: 0.000055 tier1_loss: 0.1401 (1.0994) tier2_loss: 0.0854 (1.1977) time: 0.1060 data: 0.0001 max mem: 326
+Epoch: [2] [265/266] eta: 0:00:00 lr: 0.000060 tier1_loss: 0.1275 (1.1432) tier2_loss: 0.1508 (1.2237) time: 0.1001 data: 0.0001 max mem: 326
+Epoch: [2] Total time: 0:00:28 (28.5486 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.1110 (0.1110) acc1: 100.0000 (100.0000) time: 0.1521 data: 0.1186 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.1542 (1.1046) acc1: 100.0000 (68.9655) time: 0.0272 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9749 s / it)
+* Acc@1 68.966 loss 1.105 auroc 0.524 f1_score 0.204
+  per-class F1 (Val): {'negative': np.float32(0.816), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=68.966 f1_macro=0.204
+Test [  0/197] eta: 0:00:33 loss: 2.9514 (2.9514) acc1: 0.0000 (0.0000) time: 0.1715 data: 0.1347 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.1405 (1.3772) acc1: 100.0000 (59.4059) time: 0.0277 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.1174 (1.3055) acc1: 100.0000 (61.4213) time: 0.0265 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.6385 s / it)
+* Acc@1 61.421 loss 1.306 auroc 0.632 f1_score 0.190
+  per-class F1 (Test): {'negative': np.float32(0.761), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=61.421 f1_macro=0.190
+
+Epoch: [3] [  0/266] eta: 0:01:00 lr: 0.000060 tier1_loss: 0.1449 (0.1449) tier2_loss: 0.1588 (0.1588) time: 0.2257 data: 0.0919 max mem: 326
+Epoch: [3] [100/266] eta: 0:00:16 lr: 0.000068 tier1_loss: 0.1641 (1.2281) tier2_loss: 0.2081 (1.2593) time: 0.0957 data: 0.0001 max mem: 326
+Epoch: [3] [200/266] eta: 0:00:06 lr: 0.000075 tier1_loss: 0.1080 (1.1454) tier2_loss: 0.1493 (1.1753) time: 0.1092 data: 0.0001 max mem: 326
+Epoch: [3] [265/266] eta: 0:00:00 lr: 0.000080 tier1_loss: 0.1104 (1.1460) tier2_loss: 0.1217 (1.1896) time: 0.0983 data: 0.0001 max mem: 326
+Epoch: [3] Total time: 0:00:27 (27.7262 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.1067 (0.1067) acc1: 100.0000 (100.0000) time: 0.1703 data: 0.1298 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.1179 (1.1531) acc1: 100.0000 (68.9655) time: 0.0277 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9809 s / it)
+* Acc@1 68.966 loss 1.153 auroc 0.539 f1_score 0.204
+  per-class F1 (Val): {'negative': np.float32(0.816), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=68.966 f1_macro=0.204
+Test [  0/197] eta: 0:00:33 loss: 3.1430 (3.1430) acc1: 0.0000 (0.0000) time: 0.1716 data: 0.1277 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.1013 (1.4217) acc1: 100.0000 (59.4059) time: 0.0279 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0923 (1.3560) acc1: 100.0000 (61.4213) time: 0.0260 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7089 s / it)
+* Acc@1 61.421 loss 1.356 auroc 0.708 f1_score 0.190
+  per-class F1 (Test): {'negative': np.float32(0.761), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=61.421 f1_macro=0.190
+
+Epoch: [4] [  0/266] eta: 0:01:04 lr: 0.000080 tier1_loss: 0.0988 (0.0988) tier2_loss: 0.1022 (0.1022) time: 0.2441 data: 0.1117 max mem: 326
+Epoch: [4] [100/266] eta: 0:00:17 lr: 0.000088 tier1_loss: 0.1654 (1.2392) tier2_loss: 0.1894 (1.2906) time: 0.0993 data: 0.0001 max mem: 326
+Epoch: [4] [200/266] eta: 0:00:06 lr: 0.000095 tier1_loss: 0.0940 (1.0576) tier2_loss: 0.0790 (1.1031) time: 0.1079 data: 0.0001 max mem: 326
+Epoch: [4] [265/266] eta: 0:00:00 lr: 0.000100 tier1_loss: 0.1544 (1.1358) tier2_loss: 0.1924 (1.1845) time: 0.0970 data: 0.0001 max mem: 326
+Epoch: [4] Total time: 0:00:27 (27.7464 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.1576 (0.1576) acc1: 100.0000 (100.0000) time: 0.1589 data: 0.1186 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.2477 (1.1175) acc1: 100.0000 (68.9655) time: 0.0286 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.0192 s / it)
+* Acc@1 68.966 loss 1.117 auroc 0.547 f1_score 0.204
+  per-class F1 (Val): {'negative': np.float32(0.816), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=68.966 f1_macro=0.204
+Test [  0/197] eta: 0:00:32 loss: 2.1471 (2.1471) acc1: 0.0000 (0.0000) time: 0.1625 data: 0.1173 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.2082 (1.2700) acc1: 100.0000 (59.4059) time: 0.0285 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.1184 (1.2372) acc1: 100.0000 (61.4213) time: 0.0270 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.9411 s / it)
+* Acc@1 61.421 loss 1.237 auroc 0.669 f1_score 0.190
+  per-class F1 (Test): {'negative': np.float32(0.761), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=61.421 f1_macro=0.190
+
+Epoch: [5] [  0/266] eta: 0:01:10 lr: 0.000100 tier1_loss: 0.1627 (0.1627) tier2_loss: 0.2852 (0.2852) time: 0.2657 data: 0.1178 max mem: 326
+Epoch: [5] [100/266] eta: 0:00:18 lr: 0.000100 tier1_loss: 0.3319 (1.2730) tier2_loss: 0.2868 (1.3416) time: 0.1208 data: 0.0001 max mem: 326
+Epoch: [5] [200/266] eta: 0:00:07 lr: 0.000099 tier1_loss: 0.0888 (1.0815) tier2_loss: 0.0745 (1.1423) time: 0.1047 data: 0.0001 max mem: 326
+Epoch: [5] [265/266] eta: 0:00:00 lr: 0.000099 tier1_loss: 0.0883 (1.0208) tier2_loss: 0.0496 (1.0894) time: 0.1153 data: 0.0001 max mem: 326
+Epoch: [5] Total time: 0:00:30 (30.2268 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.0369 (0.0369) acc1: 100.0000 (100.0000) time: 0.1658 data: 0.1227 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0439 (1.3696) acc1: 100.0000 (68.9655) time: 0.0285 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9952 s / it)
+* Acc@1 68.966 loss 1.370 auroc 0.580 f1_score 0.204
+  per-class F1 (Val): {'negative': np.float32(0.816), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=68.966 f1_macro=0.204
+Test [  0/197] eta: 0:00:30 loss: 4.1833 (4.1833) acc1: 0.0000 (0.0000) time: 0.1541 data: 0.1105 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.0414 (1.5438) acc1: 100.0000 (61.3861) time: 0.0300 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0339 (1.3794) acc1: 100.0000 (63.9594) time: 0.0267 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.9161 s / it)
+* Acc@1 63.959 loss 1.379 auroc 0.684 f1_score 0.246
+  per-class F1 (Test): {'negative': np.float32(0.773), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.213)}
+  [DIAG] Tier1 сам по собі: acc=61.421 f1_macro=0.190
+
+Epoch: [6] [  0/266] eta: 0:01:02 lr: 0.000099 tier1_loss: 0.0697 (0.0697) tier2_loss: 0.0373 (0.0373) time: 0.2352 data: 0.0983 max mem: 326
+Epoch: [6] [100/266] eta: 0:00:19 lr: 0.000098 tier1_loss: 0.9255 (1.0699) tier2_loss: 0.1648 (1.0685) time: 0.1087 data: 0.0001 max mem: 326
+Epoch: [6] [200/266] eta: 0:00:07 lr: 0.000097 tier1_loss: 0.1034 (1.0157) tier2_loss: 0.0768 (1.0277) time: 0.1091 data: 0.0001 max mem: 326
+Epoch: [6] [265/266] eta: 0:00:00 lr: 0.000096 tier1_loss: 0.1421 (1.0376) tier2_loss: 0.1288 (1.0698) time: 0.0983 data: 0.0001 max mem: 326
+Epoch: [6] Total time: 0:00:29 (29.6340 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.1776 (0.1776) acc1: 100.0000 (100.0000) time: 0.1450 data: 0.1141 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.3233 (1.1751) acc1: 100.0000 (65.5172) time: 0.0278 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9923 s / it)
+* Acc@1 65.517 loss 1.175 auroc 0.652 f1_score 0.198
+  per-class F1 (Val): {'negative': np.float32(0.792), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.0)}
+  [DIAG] Tier1 сам по собі: acc=65.517 f1_macro=0.198
+Test [  0/197] eta: 0:00:29 loss: 2.4072 (2.4072) acc1: 0.0000 (0.0000) time: 0.1504 data: 0.1162 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.2027 (1.0200) acc1: 100.0000 (65.3465) time: 0.0282 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.1224 (0.8297) acc1: 100.0000 (73.0964) time: 0.0270 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7430 s / it)
+* Acc@1 73.096 loss 0.830 auroc 0.757 f1_score 0.388
+  per-class F1 (Test): {'negative': np.float32(0.819), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.732)}
+  [DIAG] Tier1 сам по собі: acc=71.637 f1_macro=0.365
+
+Epoch: [7] [  0/266] eta: 0:00:53 lr: 0.000096 tier1_loss: 0.1026 (0.1026) tier2_loss: 0.1241 (0.1241) time: 0.2029 data: 0.0955 max mem: 326
+Epoch: [7] [100/266] eta: 0:00:18 lr: 0.000094 tier1_loss: 0.1149 (0.9947) tier2_loss: 0.1050 (1.0309) time: 0.1082 data: 0.0001 max mem: 326
+Epoch: [7] [200/266] eta: 0:00:07 lr: 0.000092 tier1_loss: 0.0943 (0.9395) tier2_loss: 0.0960 (0.9980) time: 0.1128 data: 0.0001 max mem: 326
+Epoch: [7] [265/266] eta: 0:00:00 lr: 0.000091 tier1_loss: 0.1182 (0.9351) tier2_loss: 0.0850 (1.0113) time: 0.1026 data: 0.0001 max mem: 326
+Epoch: [7] Total time: 0:00:28 (28.9677 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.0516 (0.0516) acc1: 100.0000 (100.0000) time: 0.1530 data: 0.1178 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.1544 (1.3262) acc1: 100.0000 (68.9655) time: 0.0274 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9691 s / it)
+* Acc@1 68.966 loss 1.326 auroc 0.615 f1_score 0.302
+  per-class F1 (Val): {'negative': np.float32(0.809), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.4)}
+  [DIAG] Tier1 сам по собі: acc=67.672 f1_macro=0.268
+Test [  0/197] eta: 0:00:28 loss: 3.4779 (3.4779) acc1: 0.0000 (0.0000) time: 0.1470 data: 0.1124 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.0645 (1.1681) acc1: 100.0000 (70.2970) time: 0.0282 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0294 (0.9434) acc1: 100.0000 (75.6345) time: 0.0268 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7257 s / it)
+* Acc@1 75.635 loss 0.943 auroc 0.748 f1_score 0.412
+  per-class F1 (Test): {'negative': np.float32(0.834), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.816)}
+  [DIAG] Tier1 сам по собі: acc=75.254 f1_macro=0.406
+
+Epoch: [8] [  0/266] eta: 0:01:06 lr: 0.000091 tier1_loss: 0.0792 (0.0792) tier2_loss: 0.0596 (0.0596) time: 0.2503 data: 0.1224 max mem: 326
+Epoch: [8] [100/266] eta: 0:00:17 lr: 0.000088 tier1_loss: 0.0694 (0.8440) tier2_loss: 0.0676 (0.9217) time: 0.0989 data: 0.0001 max mem: 326
+Epoch: [8] [200/266] eta: 0:00:06 lr: 0.000085 tier1_loss: 0.1128 (0.8535) tier2_loss: 0.0639 (0.8993) time: 0.1095 data: 0.0001 max mem: 326
+Epoch: [8] [265/266] eta: 0:00:00 lr: 0.000084 tier1_loss: 0.1388 (0.8935) tier2_loss: 0.1443 (0.9312) time: 0.1044 data: 0.0001 max mem: 326
+Epoch: [8] Total time: 0:00:27 (27.8189 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.1395 (0.1395) acc1: 100.0000 (100.0000) time: 0.1661 data: 0.1308 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.2290 (1.0810) acc1: 100.0000 (68.9655) time: 0.0274 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9777 s / it)
+* Acc@1 68.966 loss 1.081 auroc 0.675 f1_score 0.417
+  per-class F1 (Val): {'negative': np.float32(0.81), 'itc': np.float32(0.0), 'micro': np.float32(0.286), 'macro': np.float32(0.571)}
+  [DIAG] Tier1 сам по собі: acc=68.966 f1_macro=0.310
+Test [  0/197] eta: 0:00:30 loss: 1.3936 (1.3936) acc1: 0.0000 (0.0000) time: 0.1562 data: 0.1160 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.3703 (0.9458) acc1: 100.0000 (70.2970) time: 0.0283 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.1445 (1.0083) acc1: 100.0000 (70.5584) time: 0.0269 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7732 s / it)
+* Acc@1 70.558 loss 1.008 auroc 0.774 f1_score 0.380
+  per-class F1 (Test): {'negative': np.float32(0.813), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.707)}
+  [DIAG] Tier1 сам по собі: acc=77.284 f1_macro=0.423
+
+Epoch: [9] [  0/266] eta: 0:00:59 lr: 0.000084 tier1_loss: 3.2661 (3.2661) tier2_loss: 2.6887 (2.6887) time: 0.2253 data: 0.1123 max mem: 326
+Epoch: [9] [100/266] eta: 0:00:17 lr: 0.000081 tier1_loss: 0.0565 (0.9138) tier2_loss: 0.0667 (0.9899) time: 0.1047 data: 0.0001 max mem: 326
+Epoch: [9] [200/266] eta: 0:00:06 lr: 0.000077 tier1_loss: 0.0421 (0.8112) tier2_loss: 0.0202 (0.8472) time: 0.1033 data: 0.0001 max mem: 326
+Epoch: [9] [265/266] eta: 0:00:00 lr: 0.000075 tier1_loss: 0.0499 (0.7810) tier2_loss: 0.0230 (0.8207) time: 0.0998 data: 0.0001 max mem: 326
+Epoch: [9] Total time: 0:00:27 (27.9957 s / it)
+Val [ 0/29] eta: 0:00:05 loss: 0.1064 (0.1064) acc1: 100.0000 (100.0000) time: 0.1779 data: 0.1370 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0449 (1.2476) acc1: 100.0000 (68.9655) time: 0.0274 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9855 s / it)
+* Acc@1 68.966 loss 1.248 auroc 0.725 f1_score 0.307
+  per-class F1 (Val): {'negative': np.float32(0.826), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.4)}
+  [DIAG] Tier1 сам по собі: acc=69.397 f1_macro=0.307
+Test [  0/197] eta: 0:00:29 loss: 3.5813 (3.5813) acc1: 0.0000 (0.0000) time: 0.1478 data: 0.1133 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.0734 (0.9827) acc1: 100.0000 (75.2475) time: 0.0284 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0226 (0.8269) acc1: 100.0000 (80.2030) time: 0.0275 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7190 s / it)
+* Acc@1 80.203 loss 0.827 auroc 0.788 f1_score 0.443
+  per-class F1 (Test): {'negative': np.float32(0.879), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.894)}
+  [DIAG] Tier1 сам по собі: acc=80.584 f1_macro=0.447
+
+Epoch: [10] [  0/266] eta: 0:01:04 lr: 0.000075 tier1_loss: 3.7136 (3.7136) tier2_loss: 4.6367 (4.6367) time: 0.2432 data: 0.1213 max mem: 326
+Epoch: [10] [100/266] eta: 0:00:17 lr: 0.000072 tier1_loss: 0.0477 (0.6982) tier2_loss: 0.0188 (0.6533) time: 0.0979 data: 0.0001 max mem: 326
+Epoch: [10] [200/266] eta: 0:00:06 lr: 0.000068 tier1_loss: 0.0432 (0.7129) tier2_loss: 0.0450 (0.6909) time: 0.1125 data: 0.0001 max mem: 326
+Epoch: [10] [265/266] eta: 0:00:00 lr: 0.000066 tier1_loss: 0.0338 (0.6697) tier2_loss: 0.0214 (0.6559) time: 0.1084 data: 0.0001 max mem: 326
+Epoch: [10] Total time: 0:00:28 (28.1196 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.0247 (0.0247) acc1: 100.0000 (100.0000) time: 0.1688 data: 0.1275 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0181 (0.9953) acc1: 100.0000 (72.4138) time: 0.0270 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9687 s / it)
+* Acc@1 72.414 loss 0.995 auroc 0.759 f1_score 0.354
+  per-class F1 (Val): {'negative': np.float32(0.844), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.571)}
+  [DIAG] Tier1 сам по собі: acc=73.276 f1_macro=0.362
+Test [  0/197] eta: 0:00:30 loss: 3.3673 (3.3673) acc1: 0.0000 (0.0000) time: 0.1569 data: 0.1198 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.0212 (0.9177) acc1: 100.0000 (77.2277) time: 0.0284 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0182 (0.8180) acc1: 100.0000 (80.7107) time: 0.0270 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7225 s / it)
+* Acc@1 80.711 loss 0.818 auroc 0.838 f1_score 0.440
+  per-class F1 (Test): {'negative': np.float32(0.893), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.866)}
+  [DIAG] Tier1 сам по собі: acc=81.662 f1_macro=0.447
+
+Epoch: [11] [  0/266] eta: 0:01:12 lr: 0.000066 tier1_loss: 0.0358 (0.0358) tier2_loss: 0.0356 (0.0356) time: 0.2722 data: 0.1237 max mem: 326
+Epoch: [11] [100/266] eta: 0:00:18 lr: 0.000062 tier1_loss: 0.0216 (0.6413) tier2_loss: 0.0153 (0.5623) time: 0.1059 data: 0.0001 max mem: 326
+Epoch: [11] [200/266] eta: 0:00:07 lr: 0.000058 tier1_loss: 0.0279 (0.6123) tier2_loss: 0.0154 (0.5693) time: 0.1083 data: 0.0001 max mem: 326
+Epoch: [11] [265/266] eta: 0:00:00 lr: 0.000056 tier1_loss: 0.0585 (0.6314) tier2_loss: 0.0193 (0.6071) time: 0.1057 data: 0.0001 max mem: 326
+Epoch: [11] Total time: 0:00:28 (28.5155 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.0328 (0.0328) acc1: 100.0000 (100.0000) time: 0.1619 data: 0.1259 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0269 (1.0891) acc1: 100.0000 (79.3103) time: 0.0318 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.2785 s / it)
+* Acc@1 79.310 loss 1.089 auroc 0.766 f1_score 0.530
+  per-class F1 (Val): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.571), 'macro': np.float32(0.667)}
+  [DIAG] Tier1 сам по собі: acc=77.155 f1_macro=0.471
+Test [  0/197] eta: 0:00:30 loss: 0.0384 (0.0384) acc1: 100.0000 (100.0000) time: 0.1552 data: 0.1196 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.0321 (0.7154) acc1: 100.0000 (82.1782) time: 0.0282 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0119 (0.8190) acc1: 100.0000 (81.2183) time: 0.0265 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7278 s / it)
+* Acc@1 81.218 loss 0.819 auroc 0.853 f1_score 0.550
+  per-class F1 (Test): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.412), 'macro': np.float32(0.903)}
+  [DIAG] Tier1 сам по собі: acc=80.457 f1_macro=0.467
+
+Epoch: [12] [  0/266] eta: 0:01:06 lr: 0.000056 tier1_loss: 0.1713 (0.1713) tier2_loss: 0.0527 (0.0527) time: 0.2502 data: 0.0991 max mem: 326
+Epoch: [12] [100/266] eta: 0:00:17 lr: 0.000052 tier1_loss: 0.0401 (0.5310) tier2_loss: 0.0196 (0.4032) time: 0.1041 data: 0.0001 max mem: 326
+Epoch: [12] [200/266] eta: 0:00:06 lr: 0.000048 tier1_loss: 0.0438 (0.4966) tier2_loss: 0.0100 (0.4198) time: 0.1036 data: 0.0001 max mem: 326
+Epoch: [12] [265/266] eta: 0:00:00 lr: 0.000045 tier1_loss: 0.0529 (0.5480) tier2_loss: 0.0277 (0.5089) time: 0.1123 data: 0.0001 max mem: 326
+Epoch: [12] Total time: 0:00:28 (28.5328 s / it)
+Val [ 0/29] eta: 0:00:05 loss: 0.0600 (0.0600) acc1: 100.0000 (100.0000) time: 0.1792 data: 0.1302 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0374 (1.1161) acc1: 100.0000 (79.3103) time: 0.0292 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.3602 s / it)
+* Acc@1 79.310 loss 1.116 auroc 0.744 f1_score 0.530
+  per-class F1 (Val): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.571), 'macro': np.float32(0.667)}
+  [DIAG] Tier1 сам по собі: acc=79.310 f1_macro=0.539
+Test [  0/197] eta: 0:00:28 loss: 0.1280 (0.1280) acc1: 100.0000 (100.0000) time: 0.1471 data: 0.1063 max mem: 326
+Test [100/197] eta: 0:00:02 loss: 0.0943 (0.7141) acc1: 100.0000 (81.1881) time: 0.0284 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0111 (0.7153) acc1: 100.0000 (82.7411) time: 0.0268 data: 0.0001 max mem: 326
+Test Total time: 0:00:05 (5.7708 s / it)
+* Acc@1 82.741 loss 0.715 auroc 0.857 f1_score 0.569
+  per-class F1 (Test): {'negative': np.float32(0.898), 'itc': np.float32(0.0), 'micro': np.float32(0.467), 'macro': np.float32(0.913)}
+  [DIAG] Tier1 сам по собі: acc=81.536 f1_macro=0.505
+
+Epoch: [13] [  0/266] eta: 0:00:58 lr: 0.000045 tier1_loss: 0.0482 (0.0482) tier2_loss: 0.0186 (0.0186) time: 0.2204 data: 0.1073 max mem: 326
+Epoch: [13] [100/266] eta: 0:00:17 lr: 0.000041 tier1_loss: 0.0521 (0.4948) tier2_loss: 0.0275 (0.4055) time: 0.1021 data: 0.0001 max mem: 326
+Epoch: [13] [200/266] eta: 0:00:06 lr: 0.000038 tier1_loss: 0.0215 (0.4633) tier2_loss: 0.0069 (0.4396) time: 0.0945 data: 0.0001 max mem: 326
+Epoch: [13] [265/266] eta: 0:00:00 lr: 0.000035 tier1_loss: 0.0344 (0.5011) tier2_loss: 0.0133 (0.4661) time: 0.1103 data: 0.0001 max mem: 326
+Epoch: [13] Total time: 0:00:27 (27.7835 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.0387 (0.0387) acc1: 100.0000 (100.0000) time: 0.1721 data: 0.1330 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0124 (1.2062) acc1: 100.0000 (72.4138) time: 0.0345 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.4189 s / it)
+* Acc@1 72.414 loss 1.206 auroc 0.766 f1_score 0.364
+  per-class F1 (Val): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.0), 'macro': np.float32(0.571)}
+  [DIAG] Tier1 сам по собі: acc=77.586 f1_macro=0.496
+Test [  0/197] eta: 0:00:33 loss: 1.3658 (1.3658) acc1: 0.0000 (0.0000) time: 0.1703 data: 0.1234 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.0632 (0.8849) acc1: 100.0000 (77.2277) time: 0.0288 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0069 (0.8504) acc1: 100.0000 (79.6954) time: 0.0275 data: 0.0001 max mem: 326
+Test Total time: 0:00:06 (6.1812 s / it)
+* Acc@1 79.695 loss 0.850 auroc 0.853 f1_score 0.483
+  per-class F1 (Test): {'negative': np.float32(0.893), 'itc': np.float32(0.0), 'micro': np.float32(0.182), 'macro': np.float32(0.857)}
+  [DIAG] Tier1 сам по собі: acc=81.536 f1_macro=0.509
+
+Epoch: [14] [  0/266] eta: 0:00:58 lr: 0.000035 tier1_loss: 1.6357 (1.6357) tier2_loss: 2.9988 (2.9988) time: 0.2202 data: 0.0922 max mem: 326
+Epoch: [14] [100/266] eta: 0:00:16 lr: 0.000032 tier1_loss: 0.0227 (0.3592) tier2_loss: 0.0084 (0.3116) time: 0.0997 data: 0.0001 max mem: 326
+Epoch: [14] [200/266] eta: 0:00:06 lr: 0.000028 tier1_loss: 0.0293 (0.4678) tier2_loss: 0.0091 (0.4580) time: 0.1089 data: 0.0001 max mem: 326
+Epoch: [14] [265/266] eta: 0:00:00 lr: 0.000026 tier1_loss: 0.0296 (0.4922) tier2_loss: 0.0153 (0.4873) time: 0.1037 data: 0.0001 max mem: 326
+Epoch: [14] Total time: 0:00:27 (27.8000 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.0547 (0.0547) acc1: 100.0000 (100.0000) time: 0.1576 data: 0.1199 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0114 (1.2652) acc1: 100.0000 (75.8621) time: 0.0348 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.3827 s / it)
+* Acc@1 75.862 loss 1.265 auroc 0.777 f1_score 0.506
+  per-class F1 (Val): {'negative': np.float32(0.857), 'itc': np.float32(0.0), 'micro': np.float32(0.5), 'macro': np.float32(0.667)}
+  [DIAG] Tier1 сам по собі: acc=78.448 f1_macro=0.526
+Test [  0/197] eta: 0:00:34 loss: 0.0508 (0.0508) acc1: 100.0000 (100.0000) time: 0.1729 data: 0.1179 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.1239 (0.8689) acc1: 100.0000 (76.2376) time: 0.0276 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0053 (0.9156) acc1: 100.0000 (78.1726) time: 0.0273 data: 0.0001 max mem: 326
+Test Total time: 0:00:06 (6.3880 s / it)
+* Acc@1 78.173 loss 0.916 auroc 0.847 f1_score 0.543
+  per-class F1 (Test): {'negative': np.float32(0.867), 'itc': np.float32(0.0), 'micro': np.float32(0.41), 'macro': np.float32(0.894)}
+  [DIAG] Tier1 сам по собі: acc=80.964 f1_macro=0.537
+
+Epoch: [15] [  0/266] eta: 0:01:05 lr: 0.000026 tier1_loss: 1.1886 (1.1886) tier2_loss: 0.1884 (0.1884) time: 0.2478 data: 0.1122 max mem: 326
+Epoch: [15] [100/266] eta: 0:00:18 lr: 0.000022 tier1_loss: 0.0270 (0.4726) tier2_loss: 0.0084 (0.3672) time: 0.1129 data: 0.0001 max mem: 326
+Epoch: [15] [200/266] eta: 0:00:07 lr: 0.000019 tier1_loss: 0.0191 (0.4846) tier2_loss: 0.0083 (0.4129) time: 0.1094 data: 0.0001 max mem: 326
+Epoch: [15] [265/266] eta: 0:00:00 lr: 0.000017 tier1_loss: 0.0438 (0.4645) tier2_loss: 0.0087 (0.4124) time: 0.1015 data: 0.0001 max mem: 326
+Epoch: [15] Total time: 0:00:29 (29.5934 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.0197 (0.0197) acc1: 100.0000 (100.0000) time: 0.1534 data: 0.1181 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0049 (1.2494) acc1: 100.0000 (79.3103) time: 0.0343 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.2148 s / it)
+* Acc@1 79.310 loss 1.249 auroc 0.795 f1_score 0.530
+  per-class F1 (Val): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.571), 'macro': np.float32(0.667)}
+  [DIAG] Tier1 сам по собі: acc=78.879 f1_macro=0.523
+Test [  0/197] eta: 0:00:34 loss: 0.0726 (0.0726) acc1: 100.0000 (100.0000) time: 0.1762 data: 0.1252 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.0320 (0.8836) acc1: 100.0000 (81.1881) time: 0.0296 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0038 (0.8503) acc1: 100.0000 (82.7411) time: 0.0275 data: 0.0001 max mem: 326
+Test Total time: 0:00:06 (6.3770 s / it)
+* Acc@1 82.741 loss 0.850 auroc 0.853 f1_score 0.561
+  per-class F1 (Test): {'negative': np.float32(0.905), 'itc': np.float32(0.0), 'micro': np.float32(0.438), 'macro': np.float32(0.903)}
+  [DIAG] Tier1 сам по собі: acc=82.170 f1_macro=0.544
+
+Epoch: [16] [  0/266] eta: 0:01:14 lr: 0.000017 tier1_loss: 0.0477 (0.0477) tier2_loss: 0.0045 (0.0045) time: 0.2817 data: 0.1403 max mem: 326
+Epoch: [16] [100/266] eta: 0:00:18 lr: 0.000015 tier1_loss: 0.0585 (0.5545) tier2_loss: 0.0205 (0.4110) time: 0.1024 data: 0.0001 max mem: 326
+Epoch: [16] [200/266] eta: 0:00:07 lr: 0.000012 tier1_loss: 0.0597 (0.4980) tier2_loss: 0.0092 (0.4068) time: 0.1025 data: 0.0001 max mem: 326
+Epoch: [16] [265/266] eta: 0:00:00 lr: 0.000010 tier1_loss: 0.0189 (0.4547) tier2_loss: 0.0055 (0.3730) time: 0.0916 data: 0.0001 max mem: 326
+Epoch: [16] Total time: 0:00:28 (28.5508 s / it)
+Val [ 0/29] eta: 0:00:05 loss: 0.0229 (0.0229) acc1: 100.0000 (100.0000) time: 0.1728 data: 0.1311 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0047 (1.2776) acc1: 100.0000 (79.3103) time: 0.0334 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.3865 s / it)
+* Acc@1 79.310 loss 1.278 auroc 0.782 f1_score 0.530
+  per-class F1 (Val): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.571), 'macro': np.float32(0.667)}
+  [DIAG] Tier1 сам по собі: acc=78.448 f1_macro=0.524
+Test [  0/197] eta: 0:00:35 loss: 0.6536 (0.6536) acc1: 100.0000 (100.0000) time: 0.1786 data: 0.1206 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.0640 (0.9223) acc1: 100.0000 (78.2178) time: 0.0278 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0036 (0.8828) acc1: 100.0000 (81.2183) time: 0.0265 data: 0.0001 max mem: 326
+Test Total time: 0:00:06 (6.2510 s / it)
+* Acc@1 81.218 loss 0.883 auroc 0.849 f1_score 0.557
+  per-class F1 (Test): {'negative': np.float32(0.895), 'itc': np.float32(0.0), 'micro': np.float32(0.438), 'macro': np.float32(0.894)}
+  [DIAG] Tier1 сам по собі: acc=82.678 f1_macro=0.562
+
+Epoch: [17] [  0/266] eta: 0:01:12 lr: 0.000010 tier1_loss: 0.0062 (0.0062) tier2_loss: 0.0040 (0.0040) time: 0.2726 data: 0.1346 max mem: 326
+Epoch: [17] [100/266] eta: 0:00:18 lr: 0.000008 tier1_loss: 0.0304 (0.4296) tier2_loss: 0.0119 (0.3499) time: 0.1058 data: 0.0001 max mem: 326
+Epoch: [17] [200/266] eta: 0:00:07 lr: 0.000006 tier1_loss: 0.0289 (0.4639) tier2_loss: 0.0087 (0.3524) time: 0.1030 data: 0.0001 max mem: 326
+Epoch: [17] [265/266] eta: 0:00:00 lr: 0.000005 tier1_loss: 0.0281 (0.4523) tier2_loss: 0.0075 (0.3472) time: 0.0871 data: 0.0001 max mem: 326
+Epoch: [17] Total time: 0:00:28 (28.4880 s / it)
+Val [ 0/29] eta: 0:00:05 loss: 0.0250 (0.0250) acc1: 100.0000 (100.0000) time: 0.1751 data: 0.1350 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0049 (1.2931) acc1: 100.0000 (79.3103) time: 0.0333 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.1105 s / it)
+* Acc@1 79.310 loss 1.293 auroc 0.776 f1_score 0.530
+  per-class F1 (Val): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.571), 'macro': np.float32(0.667)}
+  [DIAG] Tier1 сам по собі: acc=78.448 f1_macro=0.526
+Test [  0/197] eta: 0:00:34 loss: 0.3849 (0.3849) acc1: 100.0000 (100.0000) time: 0.1759 data: 0.1275 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.0718 (0.9176) acc1: 100.0000 (77.2277) time: 0.0288 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0036 (0.8812) acc1: 100.0000 (80.7107) time: 0.0259 data: 0.0001 max mem: 326
+Test Total time: 0:00:06 (6.6442 s / it)
+* Acc@1 80.711 loss 0.881 auroc 0.850 f1_score 0.555
+  per-class F1 (Test): {'negative': np.float32(0.891), 'itc': np.float32(0.0), 'micro': np.float32(0.438), 'macro': np.float32(0.894)}
+  [DIAG] Tier1 сам по собі: acc=82.043 f1_macro=0.546
+
+Epoch: [18] [  0/266] eta: 0:00:51 lr: 0.000005 tier1_loss: 0.0466 (0.0466) tier2_loss: 0.0044 (0.0044) time: 0.1944 data: 0.0878 max mem: 326
+Epoch: [18] [100/266] eta: 0:00:17 lr: 0.000004 tier1_loss: 0.0373 (0.4450) tier2_loss: 0.0067 (0.3154) time: 0.1060 data: 0.0001 max mem: 326
+Epoch: [18] [200/266] eta: 0:00:06 lr: 0.000003 tier1_loss: 0.0382 (0.4495) tier2_loss: 0.0117 (0.3691) time: 0.1132 data: 0.0001 max mem: 326
+Epoch: [18] [265/266] eta: 0:00:00 lr: 0.000002 tier1_loss: 0.0332 (0.4431) tier2_loss: 0.0068 (0.3312) time: 0.1054 data: 0.0001 max mem: 326
+Epoch: [18] Total time: 0:00:27 (27.8479 s / it)
+Val [ 0/29] eta: 0:00:04 loss: 0.0270 (0.0270) acc1: 100.0000 (100.0000) time: 0.1643 data: 0.1250 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0048 (1.2706) acc1: 100.0000 (79.3103) time: 0.0273 data: 0.0001 max mem: 326
+Val Total time: 0:00:00 (0.9702 s / it)
+* Acc@1 79.310 loss 1.271 auroc 0.793 f1_score 0.530
+  per-class F1 (Val): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.571), 'macro': np.float32(0.667)}
+  [DIAG] Tier1 сам по собі: acc=78.448 f1_macro=0.524
+Test [  0/197] eta: 0:00:27 loss: 0.4659 (0.4659) acc1: 100.0000 (100.0000) time: 0.1399 data: 0.1018 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.0750 (0.9127) acc1: 100.0000 (77.2277) time: 0.0368 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0034 (0.8742) acc1: 100.0000 (80.2030) time: 0.0260 data: 0.0001 max mem: 326
+Test Total time: 0:00:06 (6.4742 s / it)
+* Acc@1 80.203 loss 0.874 auroc 0.861 f1_score 0.549
+  per-class F1 (Test): {'negative': np.float32(0.89), 'itc': np.float32(0.0), 'micro': np.float32(0.412), 'macro': np.float32(0.894)}
+  [DIAG] Tier1 сам по собі: acc=82.170 f1_macro=0.555
+
+Epoch: [19] [  0/266] eta: 0:00:55 lr: 0.000002 tier1_loss: 0.0605 (0.0605) tier2_loss: 0.0189 (0.0189) time: 0.2102 data: 0.1108 max mem: 326
+Epoch: [19] [100/266] eta: 0:00:18 lr: 0.000001 tier1_loss: 0.1940 (0.2843) tier2_loss: 0.0206 (0.0956) time: 0.1087 data: 0.0001 max mem: 326
+Epoch: [19] [200/266] eta: 0:00:07 lr: 0.000001 tier1_loss: 0.0161 (0.3741) tier2_loss: 0.0058 (0.2365) time: 0.1116 data: 0.0001 max mem: 326
+Epoch: [19] [265/266] eta: 0:00:00 lr: 0.000001 tier1_loss: 0.0440 (0.4401) tier2_loss: 0.0109 (0.3164) time: 0.1115 data: 0.0001 max mem: 326
+Epoch: [19] Total time: 0:00:29 (29.2779 s / it)
+Val [ 0/29] eta: 0:00:06 loss: 0.0274 (0.0274) acc1: 100.0000 (100.0000) time: 0.2095 data: 0.1518 max mem: 326
+Val [28/29] eta: 0:00:00 loss: 0.0047 (1.2990) acc1: 100.0000 (79.3103) time: 0.0264 data: 0.0001 max mem: 326
+Val Total time: 0:00:01 (1.0093 s / it)
+* Acc@1 79.310 loss 1.299 auroc 0.782 f1_score 0.530
+  per-class F1 (Val): {'negative': np.float32(0.884), 'itc': np.float32(0.0), 'micro': np.float32(0.571), 'macro': np.float32(0.667)}
+  [DIAG] Tier1 сам по собі: acc=78.448 f1_macro=0.528
+wandb: 
+wandb: Run history:
+wandb: diag/test_tier1_acc ▁▁▁▁▁▁▄▆▆▇█▇██▇█████
+wandb:  diag/test_tier1_f1 ▁▁▁▁▁▁▄▅▅▆▆▆▇▇██████
+wandb:       perf/test_auc ▁▂▂▄▃▃▅▅▆▆▇█████████
+wandb:        perf/test_f1 ▁▁▁▁▁▂▅▅▅▆▆██▆██████
+wandb:        perf/val_auc ▁▂▂▂▂▃▅▄▅▆▇▇▇▇██████
+wandb:         perf/val_f1 ▁▁▁▁▁▁▁▃▆▃▄██▄▇█████
+wandb:          tier1_loss ▃▃▃▃▃▂▂▁▇▁▅▁▁▆▁▆▁▇▁▇▄▁▂█▂▆▂▁▁▁▁▁▁▄▁▁▁▁▁▂
+wandb:          tier2_loss ▂▁▁█▁▇▁▁▁▁▆▁▁▁▁▁▇▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb: diag/test_tier1_acc 82.1066
+wandb:  diag/test_tier1_f1 0.55436
+wandb:       perf/test_auc 0.84817
+wandb:        perf/test_f1 0.55545
+wandb:        perf/val_auc 0.78226
+wandb:         perf/val_f1 0.53045
+wandb:          tier1_loss 0.01181
+wandb:          tier2_loss 0.00563
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /data/bohatyrenko1/EXPERIMENTS_2/Hi-MoE_MIL/wandb/offline-run-20260925_125802-qblboyfi
+wandb: Find logs at: ./wandb/offline-run-20260925_125802-qblboyfi/logs
+Test [  0/197] eta: 0:00:32 loss: 0.4525 (0.4525) acc1: 100.0000 (100.0000) time: 0.1659 data: 0.1160 max mem: 326
+Test [100/197] eta: 0:00:03 loss: 0.0791 (0.9392) acc1: 100.0000 (77.2277) time: 0.0362 data: 0.0001 max mem: 326
+Test [196/197] eta: 0:00:00 loss: 0.0034 (0.8950) acc1: 100.0000 (80.7107) time: 0.0258 data: 0.0001 max mem: 326
+Test Total time: 0:00:06 (6.5523 s / it)
+* Acc@1 80.711 loss 0.895 auroc 0.848 f1_score 0.555
+  per-class F1 (Test): {'negative': np.float32(0.891), 'itc': np.float32(0.0), 'micro': np.float32(0.438), 'macro': np.float32(0.894)}
+  [DIAG] Tier1 сам по собі: acc=82.107 f1_macro=0.554
+
+============================================================
+FINAL EPOCH (19) RESULTS (DTFD-ASMIL v3, CLS-token):
+  test_auc=0.8482 test_acc=80.71 test_f1(macro)=0.5555
+  [DIAG] Tier1 сам по собі: acc=82.107 f1_macro=0.554
+  test per-class F1: {'negative': np.float32(0.891), 'itc': np.float32(0.0), 'micro': np.float32(0.438), 'macro': np.float32(0.894)}
+  test confusion matrix (rows=true, cols=pred):
+          negative         itc       micro       macro
+negative        110           4           4           3
+     itc         13           0           3           0
+   micro          3           1           7           7
+   macro          0           0           0          42
+============================================================
+Best epoch: {'epoch': 15, 'val_f1': 0.5304540395736694, 'val_auc': 0.7947435975074768, 'test_f1': 0.561371922492981, 'test_auc': 0.8531625270843506}

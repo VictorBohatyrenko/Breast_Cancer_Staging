@@ -1,0 +1,353 @@
+wandb: Tracking run with wandb version 0.28.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /data/bohatyrenko1/EXPERIMENTS_2/Hi-MoE_MIL/wandb/offline-run-20260927_160416-3xkvi13p
+wandb: View this run in the terminal with `wandb leet`
+Used config (DTFD-ASMIL v2):
+{'B': 1,
+ 'D_feat': 1536,
+ 'D_inner': 768,
+ 'M': None,
+ 'ckpt_dir': 'ckpt/bracs_dtfd_v2_uni2h_seed8',
+ 'config': 'config/bracs_uni2h_config.yml',
+ 'dataset': 'bracs',
+ 'lr': 0.0001,
+ 'min_lr': 1e-06,
+ 'n_class': 3,
+ 'n_token': 8,
+ 'n_worker': 4,
+ 'pin_memory': True,
+ 'pretrain': 'UNI2h',
+ 'seed': 8,
+ 'splits_dir': '/home/root_server/bohatyrenko/BRACS/splits',
+ 'test_dir': '/data/bohatyrenko1/features_uni2h_bracs_v2',
+ 'tier1_weight': 0.1,
+ 'tier2_D_inner': None,
+ 'tier2_n_heads': 4,
+ 'train_dir': '/data/bohatyrenko1/features_uni2h_bracs_v2',
+ 'train_epoch': 15,
+ 'wandb_mode': 'offline',
+ 'warmup_epoch': 5,
+ 'wd': 1e-05}
+M (псевдо-bags) = 8, tier1_weight = 0.1
+Class weights: [0.6582064032554626, 2.4935896396636963, 0.9261904954910278]
+Epoch: [0] [  0/389] eta: 0:12:20 lr: 0.000000 tier1_loss: 0.8999 (0.8999) tier2_loss: 1.1841 (1.1841) time: 1.9036 data: 1.0167 max mem: 2012
+Epoch: [0] [100/389] eta: 0:00:52 lr: 0.000005 tier1_loss: 1.3897 (1.1451) tier2_loss: 2.0792 (1.2879) time: 0.1562 data: 0.0001 max mem: 2414
+Epoch: [0] [200/389] eta: 0:00:32 lr: 0.000010 tier1_loss: 2.5043 (1.1566) tier2_loss: 0.7715 (1.2464) time: 0.1772 data: 0.0001 max mem: 2414
+Epoch: [0] [300/389] eta: 0:00:15 lr: 0.000015 tier1_loss: 0.3895 (1.1131) tier2_loss: 0.0457 (1.1608) time: 0.1693 data: 0.0001 max mem: 2762
+Epoch: [0] [388/389] eta: 0:00:00 lr: 0.000020 tier1_loss: 0.2416 (1.0358) tier2_loss: 0.0159 (1.1007) time: 0.1517 data: 0.0001 max mem: 2762
+Epoch: [0] Total time: 0:01:05 (65.9086 s / it)
+Val [ 0/62] eta: 0:00:24 loss: 0.5571 (0.5571) acc1: 100.0000 (100.0000) time: 0.3927 data: 0.2934 max mem: 2762
+Val [61/62] eta: 0:00:00 loss: 0.3327 (1.0497) acc1: 100.0000 (61.2903) time: 0.0412 data: 0.0001 max mem: 2762
+Val Total time: 0:00:03 (3.6774 s / it)
+* Acc@1 61.290 loss 1.050 auroc 0.764 f1_score 0.457
+  per-class F1 (Val): {'benign': np.float32(0.719), 'atypical': np.float32(0.0), 'malignant': np.float32(0.652)}
+  [DIAG] Tier1 сам по собі: acc=61.290 f1_macro=0.456
+Test [ 0/86] eta: 0:00:36 loss: 0.2195 (0.2195) acc1: 100.0000 (100.0000) time: 0.4295 data: 0.3849 max mem: 2762
+Test [85/86] eta: 0:00:00 loss: 2.0381 (1.2354) acc1: 0.0000 (55.8140) time: 0.0397 data: 0.0001 max mem: 2762
+Test Total time: 0:00:04 (4.9413 s / it)
+* Acc@1 55.814 loss 1.235 auroc 0.755 f1_score 0.436
+  per-class F1 (Test): {'benign': np.float32(0.607), 'atypical': np.float32(0.0), 'malignant': np.float32(0.7)}
+  [DIAG] Tier1 сам по собі: acc=54.797 f1_macro=0.428
+
+Epoch: [1] [  0/389] eta: 0:06:02 lr: 0.000020 tier1_loss: 0.0487 (0.0487) tier2_loss: 0.0460 (0.0460) time: 0.9329 data: 0.6064 max mem: 2762
+Epoch: [1] [100/389] eta: 0:00:47 lr: 0.000025 tier1_loss: 0.0906 (0.8394) tier2_loss: 0.0410 (0.8687) time: 0.1563 data: 0.0001 max mem: 2762
+Epoch: [1] [200/389] eta: 0:00:30 lr: 0.000030 tier1_loss: 0.3597 (0.8365) tier2_loss: 0.4389 (0.9444) time: 0.1711 data: 0.0001 max mem: 2762
+Epoch: [1] [300/389] eta: 0:00:14 lr: 0.000035 tier1_loss: 0.0444 (0.8023) tier2_loss: 0.0353 (0.9477) time: 0.1547 data: 0.0001 max mem: 2762
+Epoch: [1] [388/389] eta: 0:00:00 lr: 0.000040 tier1_loss: 0.0153 (0.7928) tier2_loss: 0.0249 (0.9538) time: 0.1606 data: 0.0001 max mem: 2763
+Epoch: [1] Total time: 0:01:04 (64.0009 s / it)
+Val [ 0/62] eta: 0:00:22 loss: 0.1382 (0.1382) acc1: 100.0000 (100.0000) time: 0.3614 data: 0.3142 max mem: 2763
+Val [61/62] eta: 0:00:00 loss: 0.0293 (1.4605) acc1: 100.0000 (61.2903) time: 0.0348 data: 0.0001 max mem: 2763
+Val Total time: 0:00:03 (3.5059 s / it)
+* Acc@1 61.290 loss 1.460 auroc 0.797 f1_score 0.454
+  per-class F1 (Val): {'benign': np.float32(0.712), 'atypical': np.float32(0.0), 'malignant': np.float32(0.649)}
+  [DIAG] Tier1 сам по собі: acc=61.290 f1_macro=0.453
+Test [ 0/86] eta: 0:00:32 loss: 0.0567 (0.0567) acc1: 100.0000 (100.0000) time: 0.3790 data: 0.3236 max mem: 2763
+Test [85/86] eta: 0:00:00 loss: 3.2854 (1.6822) acc1: 0.0000 (58.1395) time: 0.0445 data: 0.0002 max mem: 2763
+Test Total time: 0:00:04 (4.8746 s / it)
+* Acc@1 58.140 loss 1.682 auroc 0.764 f1_score 0.460
+  per-class F1 (Test): {'benign': np.float32(0.625), 'atypical': np.float32(0.0), 'malignant': np.float32(0.755)}
+  [DIAG] Tier1 сам по собі: acc=56.395 f1_macro=0.445
+
+Epoch: [2] [  0/389] eta: 0:06:04 lr: 0.000040 tier1_loss: 0.0061 (0.0061) tier2_loss: 0.0165 (0.0165) time: 0.9369 data: 0.6219 max mem: 2763
+Epoch: [2] [100/389] eta: 0:00:48 lr: 0.000045 tier1_loss: 0.0431 (0.8716) tier2_loss: 0.1217 (1.0433) time: 0.1550 data: 0.0001 max mem: 2763
+Epoch: [2] [200/389] eta: 0:00:31 lr: 0.000050 tier1_loss: 0.0493 (0.9038) tier2_loss: 0.0402 (1.0809) time: 0.1657 data: 0.0001 max mem: 2763
+Epoch: [2] [300/389] eta: 0:00:14 lr: 0.000055 tier1_loss: 0.0359 (0.8536) tier2_loss: 0.0221 (1.0367) time: 0.1737 data: 0.0001 max mem: 2768
+Epoch: [2] [388/389] eta: 0:00:00 lr: 0.000060 tier1_loss: 0.0063 (0.7823) tier2_loss: 0.0103 (0.9584) time: 0.1429 data: 0.0001 max mem: 2768
+Epoch: [2] Total time: 0:01:04 (64.6929 s / it)
+Val [ 0/62] eta: 0:00:21 loss: 8.9683 (8.9683) acc1: 0.0000 (0.0000) time: 0.3539 data: 0.3062 max mem: 2768
+Val [61/62] eta: 0:00:00 loss: 0.2247 (1.9709) acc1: 100.0000 (69.3548) time: 0.0434 data: 0.0027 max mem: 2768
+Val Total time: 0:00:03 (3.6622 s / it)
+* Acc@1 69.355 loss 1.971 auroc 0.687 f1_score 0.525
+  per-class F1 (Val): {'benign': np.float32(0.885), 'atypical': np.float32(0.0), 'malignant': np.float32(0.69)}
+  [DIAG] Tier1 сам по собі: acc=68.750 f1_macro=0.521
+Test [ 0/86] eta: 0:00:37 loss: 7.5862 (7.5862) acc1: 0.0000 (0.0000) time: 0.4403 data: 0.3559 max mem: 2768
+Test [85/86] eta: 0:00:00 loss: 4.2071 (2.2407) acc1: 0.0000 (58.1395) time: 0.0415 data: 0.0001 max mem: 2768
+Test Total time: 0:00:04 (4.9572 s / it)
+* Acc@1 58.140 loss 2.241 auroc 0.738 f1_score 0.447
+  per-class F1 (Test): {'benign': np.float32(0.667), 'atypical': np.float32(0.0), 'malignant': np.float32(0.674)}
+  [DIAG] Tier1 сам по собі: acc=58.721 f1_macro=0.452
+
+Epoch: [3] [  0/389] eta: 0:02:53 lr: 0.000060 tier1_loss: 1.6716 (1.6716) tier2_loss: 2.0189 (2.0189) time: 0.4470 data: 0.2759 max mem: 2768
+Epoch: [3] [100/389] eta: 0:00:47 lr: 0.000065 tier1_loss: 0.0190 (0.6608) tier2_loss: 0.0295 (0.6721) time: 0.1586 data: 0.0001 max mem: 2768
+Epoch: [3] [200/389] eta: 0:00:30 lr: 0.000070 tier1_loss: 0.0073 (0.6026) tier2_loss: 0.0104 (0.6874) time: 0.1691 data: 0.0001 max mem: 2768
+Epoch: [3] [300/389] eta: 0:00:14 lr: 0.000075 tier1_loss: 0.0397 (0.6274) tier2_loss: 0.0891 (0.7107) time: 0.1774 data: 0.0001 max mem: 2770
+Epoch: [3] [388/389] eta: 0:00:00 lr: 0.000080 tier1_loss: 0.0327 (0.6906) tier2_loss: 0.1055 (0.7585) time: 0.1631 data: 0.0001 max mem: 2770
+Epoch: [3] Total time: 0:01:04 (64.3871 s / it)
+Val [ 0/62] eta: 0:00:22 loss: 5.1412 (5.1412) acc1: 0.0000 (0.0000) time: 0.3666 data: 0.3125 max mem: 2770
+Val [61/62] eta: 0:00:00 loss: 0.0479 (1.1874) acc1: 100.0000 (69.3548) time: 0.0465 data: 0.0076 max mem: 2770
+Val Total time: 0:00:03 (3.7104 s / it)
+* Acc@1 69.355 loss 1.187 auroc 0.773 f1_score 0.519
+  per-class F1 (Val): {'benign': np.float32(0.828), 'atypical': np.float32(0.0), 'malignant': np.float32(0.731)}
+  [DIAG] Tier1 сам по собі: acc=69.355 f1_macro=0.519
+Test [ 0/86] eta: 0:00:30 loss: 0.1125 (0.1125) acc1: 100.0000 (100.0000) time: 0.3505 data: 0.3121 max mem: 2770
+Test [85/86] eta: 0:00:00 loss: 2.3957 (1.2345) acc1: 0.0000 (66.2791) time: 0.0410 data: 0.0001 max mem: 2770
+Test Total time: 0:00:04 (4.9498 s / it)
+* Acc@1 66.279 loss 1.235 auroc 0.819 f1_score 0.513
+  per-class F1 (Test): {'benign': np.float32(0.8), 'atypical': np.float32(0.0), 'malignant': np.float32(0.738)}
+  [DIAG] Tier1 сам по собі: acc=67.733 f1_macro=0.527
+
+Epoch: [4] [  0/389] eta: 0:02:53 lr: 0.000080 tier1_loss: 0.0082 (0.0082) tier2_loss: 0.0094 (0.0094) time: 0.4449 data: 0.2453 max mem: 2770
+Epoch: [4] [100/389] eta: 0:00:47 lr: 0.000085 tier1_loss: 0.0608 (0.6930) tier2_loss: 0.0436 (0.9258) time: 0.1566 data: 0.0001 max mem: 2770
+Epoch: [4] [200/389] eta: 0:00:31 lr: 0.000090 tier1_loss: 0.0465 (0.6952) tier2_loss: 0.1261 (0.8678) time: 0.1738 data: 0.0001 max mem: 2770
+Epoch: [4] [300/389] eta: 0:00:14 lr: 0.000095 tier1_loss: 0.0538 (0.8485) tier2_loss: 0.1170 (0.9188) time: 0.1542 data: 0.0001 max mem: 2770
+Epoch: [4] [388/389] eta: 0:00:00 lr: 0.000100 tier1_loss: 0.0118 (0.7677) tier2_loss: 0.0339 (0.8616) time: 0.1660 data: 0.0001 max mem: 2770
+Epoch: [4] Total time: 0:01:04 (64.5102 s / it)
+Val [ 0/62] eta: 0:00:19 loss: 0.0200 (0.0200) acc1: 100.0000 (100.0000) time: 0.3182 data: 0.2731 max mem: 2770
+Val [61/62] eta: 0:00:00 loss: 0.0155 (1.4096) acc1: 100.0000 (67.7419) time: 0.0417 data: 0.0014 max mem: 2770
+Val Total time: 0:00:03 (3.7266 s / it)
+* Acc@1 67.742 loss 1.410 auroc 0.806 f1_score 0.509
+  per-class F1 (Val): {'benign': np.float32(0.765), 'atypical': np.float32(0.0), 'malignant': np.float32(0.762)}
+  [DIAG] Tier1 сам по собі: acc=68.952 f1_macro=0.524
+Test [ 0/86] eta: 0:00:31 loss: 0.0156 (0.0156) acc1: 100.0000 (100.0000) time: 0.3639 data: 0.3191 max mem: 2770
+Test [85/86] eta: 0:00:00 loss: 4.3273 (1.7138) acc1: 0.0000 (63.9535) time: 0.0438 data: 0.0002 max mem: 2770
+Test Total time: 0:00:04 (4.9792 s / it)
+* Acc@1 63.953 loss 1.714 auroc 0.739 f1_score 0.505
+  per-class F1 (Test): {'benign': np.float32(0.667), 'atypical': np.float32(0.0), 'malignant': np.float32(0.847)}
+  [DIAG] Tier1 сам по собі: acc=63.953 f1_macro=0.505
+
+Epoch: [5] [  0/389] eta: 0:04:33 lr: 0.000100 tier1_loss: 0.0464 (0.0464) tier2_loss: 0.0943 (0.0943) time: 0.7029 data: 0.4001 max mem: 2770
+Epoch: [5] [100/389] eta: 0:00:50 lr: 0.000100 tier1_loss: 0.0464 (0.5903) tier2_loss: 0.0833 (0.6869) time: 0.1662 data: 0.0001 max mem: 2770
+Epoch: [5] [200/389] eta: 0:00:32 lr: 0.000099 tier1_loss: 0.0453 (0.5721) tier2_loss: 0.0894 (0.6622) time: 0.1731 data: 0.0001 max mem: 2772
+Epoch: [5] [300/389] eta: 0:00:14 lr: 0.000099 tier1_loss: 0.2698 (0.5960) tier2_loss: 0.3498 (0.7308) time: 0.1624 data: 0.0001 max mem: 2772
+Epoch: [5] [388/389] eta: 0:00:00 lr: 0.000098 tier1_loss: 0.0145 (0.6379) tier2_loss: 0.0169 (0.7597) time: 0.1597 data: 0.0001 max mem: 2772
+Epoch: [5] Total time: 0:01:04 (64.8412 s / it)
+Val [ 0/62] eta: 0:00:31 loss: 0.1523 (0.1523) acc1: 100.0000 (100.0000) time: 0.5008 data: 0.4508 max mem: 2772
+Val [61/62] eta: 0:00:00 loss: 0.1462 (1.0522) acc1: 100.0000 (62.9032) time: 0.0366 data: 0.0001 max mem: 2772
+Val Total time: 0:00:03 (3.9243 s / it)
+* Acc@1 62.903 loss 1.052 auroc 0.752 f1_score 0.476
+  per-class F1 (Val): {'benign': np.float32(0.701), 'atypical': np.float32(0.0), 'malignant': np.float32(0.727)}
+  [DIAG] Tier1 сам по собі: acc=64.315 f1_macro=0.490
+Test [ 0/86] eta: 0:00:33 loss: 0.1455 (0.1455) acc1: 100.0000 (100.0000) time: 0.3910 data: 0.3476 max mem: 2772
+Test [85/86] eta: 0:00:00 loss: 2.5429 (1.1309) acc1: 0.0000 (59.3023) time: 0.0354 data: 0.0001 max mem: 2772
+Test Total time: 0:00:04 (4.9803 s / it)
+* Acc@1 59.302 loss 1.131 auroc 0.719 f1_score 0.469
+  per-class F1 (Test): {'benign': np.float32(0.639), 'atypical': np.float32(0.0), 'malignant': np.float32(0.769)}
+  [DIAG] Tier1 сам по собі: acc=61.773 f1_macro=0.490
+
+Epoch: [6] [  0/389] eta: 0:02:23 lr: 0.000098 tier1_loss: 0.0065 (0.0065) tier2_loss: 0.0242 (0.0242) time: 0.3688 data: 0.2109 max mem: 2772
+Epoch: [6] [100/389] eta: 0:00:48 lr: 0.000096 tier1_loss: 0.0183 (0.6297) tier2_loss: 0.0242 (0.6998) time: 0.1672 data: 0.0001 max mem: 2774
+Epoch: [6] [200/389] eta: 0:00:31 lr: 0.000095 tier1_loss: 0.0212 (0.5856) tier2_loss: 0.0649 (0.7145) time: 0.1726 data: 0.0001 max mem: 2774
+Epoch: [6] [300/389] eta: 0:00:14 lr: 0.000093 tier1_loss: 0.0176 (0.5496) tier2_loss: 0.0482 (0.6767) time: 0.1640 data: 0.0001 max mem: 2774
+Epoch: [6] [388/389] eta: 0:00:00 lr: 0.000091 tier1_loss: 0.0187 (0.5886) tier2_loss: 0.0814 (0.7249) time: 0.1482 data: 0.0001 max mem: 2774
+Epoch: [6] Total time: 0:01:04 (64.1438 s / it)
+Val [ 0/62] eta: 0:00:28 loss: 4.5283 (4.5283) acc1: 0.0000 (0.0000) time: 0.4664 data: 0.4093 max mem: 2774
+Val [61/62] eta: 0:00:00 loss: 0.0848 (1.2212) acc1: 100.0000 (66.1290) time: 0.0385 data: 0.0001 max mem: 2774
+Val Total time: 0:00:03 (3.8600 s / it)
+* Acc@1 66.129 loss 1.221 auroc 0.684 f1_score 0.493
+  per-class F1 (Val): {'benign': np.float32(0.769), 'atypical': np.float32(0.0), 'malignant': np.float32(0.711)}
+  [DIAG] Tier1 сам по собі: acc=66.532 f1_macro=0.497
+Test [ 0/86] eta: 0:00:35 loss: 0.0845 (0.0845) acc1: 100.0000 (100.0000) time: 0.4150 data: 0.3657 max mem: 2774
+Test [85/86] eta: 0:00:00 loss: 2.7397 (0.9998) acc1: 0.0000 (68.6047) time: 0.0389 data: 0.0001 max mem: 2774
+Test Total time: 0:00:05 (5.1667 s / it)
+* Acc@1 68.605 loss 1.000 auroc 0.789 f1_score 0.536
+  per-class F1 (Test): {'benign': np.float32(0.714), 'atypical': np.float32(0.0), 'malignant': np.float32(0.892)}
+  [DIAG] Tier1 сам по собі: acc=65.552 f1_macro=0.514
+
+Epoch: [7] [  0/389] eta: 0:03:16 lr: 0.000091 tier1_loss: 0.0356 (0.0356) tier2_loss: 0.0754 (0.0754) time: 0.5060 data: 0.2938 max mem: 2774
+Epoch: [7] [100/389] eta: 0:00:47 lr: 0.000088 tier1_loss: 0.0407 (0.5552) tier2_loss: 0.0820 (0.6158) time: 0.1541 data: 0.0002 max mem: 2774
+Epoch: [7] [200/389] eta: 0:00:30 lr: 0.000085 tier1_loss: 0.0118 (0.5167) tier2_loss: 0.0543 (0.6392) time: 0.1521 data: 0.0001 max mem: 2774
+Epoch: [7] [300/389] eta: 0:00:14 lr: 0.000082 tier1_loss: 0.0230 (0.5137) tier2_loss: 0.0552 (0.6566) time: 0.1818 data: 0.0001 max mem: 2775
+Epoch: [7] [388/389] eta: 0:00:00 lr: 0.000080 tier1_loss: 0.0125 (0.5376) tier2_loss: 0.0482 (0.6352) time: 0.1462 data: 0.0001 max mem: 2775
+Epoch: [7] Total time: 0:01:03 (63.6756 s / it)
+Val [ 0/62] eta: 0:00:26 loss: 3.1036 (3.1036) acc1: 0.0000 (0.0000) time: 0.4346 data: 0.3709 max mem: 2775
+Val [61/62] eta: 0:00:00 loss: 0.0671 (1.3440) acc1: 100.0000 (66.1290) time: 0.0360 data: 0.0001 max mem: 2775
+Val Total time: 0:00:03 (3.8564 s / it)
+* Acc@1 66.129 loss 1.344 auroc 0.739 f1_score 0.493
+  per-class F1 (Val): {'benign': np.float32(0.769), 'atypical': np.float32(0.0), 'malignant': np.float32(0.711)}
+  [DIAG] Tier1 сам по собі: acc=67.540 f1_macro=0.504
+Test [ 0/86] eta: 0:00:35 loss: 0.0671 (0.0671) acc1: 100.0000 (100.0000) time: 0.4169 data: 0.3548 max mem: 2775
+Test [85/86] eta: 0:00:00 loss: 1.7892 (1.0300) acc1: 0.0000 (68.6047) time: 0.0335 data: 0.0001 max mem: 2775
+Test Total time: 0:00:05 (5.0506 s / it)
+* Acc@1 68.605 loss 1.030 auroc 0.796 f1_score 0.532
+  per-class F1 (Test): {'benign': np.float32(0.732), 'atypical': np.float32(0.0), 'malignant': np.float32(0.866)}
+  [DIAG] Tier1 сам по собі: acc=67.878 f1_macro=0.527
+
+Epoch: [8] [  0/389] eta: 0:02:34 lr: 0.000080 tier1_loss: 2.9252 (2.9252) tier2_loss: 3.0807 (3.0807) time: 0.3983 data: 0.2423 max mem: 2775
+Epoch: [8] [100/389] eta: 0:00:47 lr: 0.000076 tier1_loss: 0.0293 (0.4889) tier2_loss: 0.0502 (0.5512) time: 0.1538 data: 0.0001 max mem: 2775
+Epoch: [8] [200/389] eta: 0:00:30 lr: 0.000073 tier1_loss: 0.0238 (0.4595) tier2_loss: 0.0250 (0.5461) time: 0.1774 data: 0.0001 max mem: 2775
+Epoch: [8] [300/389] eta: 0:00:14 lr: 0.000069 tier1_loss: 0.0242 (0.4882) tier2_loss: 0.0859 (0.6172) time: 0.1599 data: 0.0001 max mem: 2775
+Epoch: [8] [388/389] eta: 0:00:00 lr: 0.000066 tier1_loss: 0.0241 (0.4780) tier2_loss: 0.0557 (0.5959) time: 0.1714 data: 0.0001 max mem: 2775
+Epoch: [8] Total time: 0:01:04 (64.0825 s / it)
+Val [ 0/62] eta: 0:00:20 loss: 4.7019 (4.7019) acc1: 0.0000 (0.0000) time: 0.3338 data: 0.2938 max mem: 2775
+Val [61/62] eta: 0:00:00 loss: 0.0735 (1.2214) acc1: 100.0000 (69.3548) time: 0.0414 data: 0.0001 max mem: 2775
+Val Total time: 0:00:04 (4.1342 s / it)
+* Acc@1 69.355 loss 1.221 auroc 0.774 f1_score 0.520
+  per-class F1 (Val): {'benign': np.float32(0.814), 'atypical': np.float32(0.0), 'malignant': np.float32(0.745)}
+  [DIAG] Tier1 сам по собі: acc=70.363 f1_macro=0.527
+Test [ 0/86] eta: 0:00:32 loss: 0.0712 (0.0712) acc1: 100.0000 (100.0000) time: 0.3767 data: 0.3291 max mem: 2775
+Test [85/86] eta: 0:00:00 loss: 1.7453 (1.1335) acc1: 0.0000 (67.4419) time: 0.0444 data: 0.0001 max mem: 2775
+Test Total time: 0:00:05 (5.2769 s / it)
+* Acc@1 67.442 loss 1.133 auroc 0.824 f1_score 0.541
+  per-class F1 (Test): {'benign': np.float32(0.754), 'atypical': np.float32(0.083), 'malignant': np.float32(0.785)}
+  [DIAG] Tier1 сам по собі: acc=69.622 f1_macro=0.554
+
+Epoch: [9] [  0/389] eta: 0:02:26 lr: 0.000066 tier1_loss: 0.0095 (0.0095) tier2_loss: 0.0243 (0.0243) time: 0.3770 data: 0.1795 max mem: 2775
+Epoch: [9] [100/389] eta: 0:00:46 lr: 0.000062 tier1_loss: 0.1400 (0.5312) tier2_loss: 0.1608 (0.7374) time: 0.1544 data: 0.0001 max mem: 2775
+Epoch: [9] [200/389] eta: 0:00:31 lr: 0.000058 tier1_loss: 0.0099 (0.4807) tier2_loss: 0.0292 (0.6462) time: 0.1617 data: 0.0001 max mem: 2783
+Epoch: [9] [300/389] eta: 0:00:14 lr: 0.000054 tier1_loss: 0.0116 (0.4327) tier2_loss: 0.0337 (0.5960) time: 0.1598 data: 0.0001 max mem: 2783
+Epoch: [9] [388/389] eta: 0:00:00 lr: 0.000051 tier1_loss: 0.0513 (0.4627) tier2_loss: 0.0930 (0.6086) time: 0.1581 data: 0.0001 max mem: 2783
+Epoch: [9] Total time: 0:01:04 (64.1796 s / it)
+Val [ 0/62] eta: 0:00:19 loss: 0.1694 (0.1694) acc1: 100.0000 (100.0000) time: 0.3224 data: 0.2870 max mem: 2783
+Val [61/62] eta: 0:00:00 loss: 0.1163 (1.0903) acc1: 100.0000 (67.7419) time: 0.0420 data: 0.0026 max mem: 2783
+Val Total time: 0:00:03 (3.9068 s / it)
+* Acc@1 67.742 loss 1.090 auroc 0.767 f1_score 0.509
+  per-class F1 (Val): {'benign': np.float32(0.765), 'atypical': np.float32(0.0), 'malignant': np.float32(0.762)}
+  [DIAG] Tier1 сам по собі: acc=70.161 f1_macro=0.567
+Test [ 0/86] eta: 0:00:24 loss: 0.1158 (0.1158) acc1: 100.0000 (100.0000) time: 0.2792 data: 0.2398 max mem: 2783
+Test [85/86] eta: 0:00:00 loss: 2.2869 (1.0507) acc1: 0.0000 (65.1163) time: 0.0408 data: 0.0001 max mem: 2783
+Test Total time: 0:00:05 (5.1356 s / it)
+* Acc@1 65.116 loss 1.051 auroc 0.799 f1_score 0.514
+  per-class F1 (Test): {'benign': np.float32(0.674), 'atypical': np.float32(0.0), 'malignant': np.float32(0.867)}
+  [DIAG] Tier1 сам по собі: acc=65.843 f1_macro=0.531
+
+Epoch: [10] [  0/389] eta: 0:02:20 lr: 0.000051 tier1_loss: 0.0295 (0.0295) tier2_loss: 0.0393 (0.0393) time: 0.3619 data: 0.1770 max mem: 2783
+Epoch: [10] [100/389] eta: 0:00:48 lr: 0.000047 tier1_loss: 0.0647 (0.5000) tier2_loss: 0.0832 (0.5506) time: 0.1674 data: 0.0001 max mem: 2783
+Epoch: [10] [200/389] eta: 0:00:31 lr: 0.000043 tier1_loss: 0.0311 (0.5341) tier2_loss: 0.0503 (0.6350) time: 0.1680 data: 0.0001 max mem: 2783
+Epoch: [10] [300/389] eta: 0:00:14 lr: 0.000039 tier1_loss: 0.0218 (0.4358) tier2_loss: 0.0542 (0.5406) time: 0.1554 data: 0.0001 max mem: 2783
+Epoch: [10] [388/389] eta: 0:00:00 lr: 0.000035 tier1_loss: 0.0175 (0.4356) tier2_loss: 0.0455 (0.5517) time: 0.1866 data: 0.0001 max mem: 2783
+Epoch: [10] Total time: 0:01:04 (64.0114 s / it)
+Val [ 0/62] eta: 0:00:21 loss: 0.1185 (0.1185) acc1: 100.0000 (100.0000) time: 0.3424 data: 0.3034 max mem: 2783
+Val [61/62] eta: 0:00:00 loss: 0.0704 (0.9463) acc1: 100.0000 (77.4194) time: 0.0403 data: 0.0016 max mem: 2783
+Val Total time: 0:00:03 (3.8935 s / it)
+* Acc@1 77.419 loss 0.946 auroc 0.842 f1_score 0.723
+  per-class F1 (Val): {'benign': np.float32(0.812), 'atypical': np.float32(0.526), 'malignant': np.float32(0.829)}
+  [DIAG] Tier1 сам по собі: acc=72.581 f1_macro=0.625
+Test [ 0/86] eta: 0:00:24 loss: 0.0688 (0.0688) acc1: 100.0000 (100.0000) time: 0.2848 data: 0.2444 max mem: 2783
+Test [85/86] eta: 0:00:00 loss: 2.0916 (1.1488) acc1: 0.0000 (65.1163) time: 0.0443 data: 0.0002 max mem: 2783
+Test Total time: 0:00:05 (5.0102 s / it)
+* Acc@1 65.116 loss 1.149 auroc 0.823 f1_score 0.514
+  per-class F1 (Test): {'benign': np.float32(0.69), 'atypical': np.float32(0.0), 'malignant': np.float32(0.852)}
+  [DIAG] Tier1 сам по собі: acc=66.279 f1_macro=0.557
+
+Epoch: [11] [  0/389] eta: 0:03:55 lr: 0.000035 tier1_loss: 0.0269 (0.0269) tier2_loss: 0.0519 (0.0519) time: 0.6066 data: 0.3638 max mem: 2783
+Epoch: [11] [100/389] eta: 0:00:46 lr: 0.000031 tier1_loss: 0.0242 (0.4606) tier2_loss: 0.0553 (0.6111) time: 0.1655 data: 0.0001 max mem: 2783
+Epoch: [11] [200/389] eta: 0:00:30 lr: 0.000028 tier1_loss: 0.0103 (0.3787) tier2_loss: 0.0221 (0.4872) time: 0.1709 data: 0.0001 max mem: 2783
+Epoch: [11] [300/389] eta: 0:00:14 lr: 0.000024 tier1_loss: 0.0076 (0.3717) tier2_loss: 0.0322 (0.4641) time: 0.1855 data: 0.0001 max mem: 2783
+Epoch: [11] [388/389] eta: 0:00:00 lr: 0.000021 tier1_loss: 0.0203 (0.3961) tier2_loss: 0.0500 (0.5095) time: 0.1636 data: 0.0001 max mem: 2783
+Epoch: [11] Total time: 0:01:04 (64.2415 s / it)
+Val [ 0/62] eta: 0:00:28 loss: 1.7898 (1.7898) acc1: 0.0000 (0.0000) time: 0.4522 data: 0.4024 max mem: 2783
+Val [61/62] eta: 0:00:00 loss: 0.0491 (1.1043) acc1: 100.0000 (70.9677) time: 0.0381 data: 0.0020 max mem: 2783
+Val Total time: 0:00:04 (4.1090 s / it)
+* Acc@1 70.968 loss 1.104 auroc 0.842 f1_score 0.599
+  per-class F1 (Val): {'benign': np.float32(0.806), 'atypical': np.float32(0.235), 'malignant': np.float32(0.756)}
+  [DIAG] Tier1 сам по собі: acc=69.355 f1_macro=0.556
+Test [ 0/86] eta: 0:00:33 loss: 0.0438 (0.0438) acc1: 100.0000 (100.0000) time: 0.3948 data: 0.3536 max mem: 2783
+Test [85/86] eta: 0:00:00 loss: 0.8229 (1.0454) acc1: 0.0000 (67.4419) time: 0.0374 data: 0.0001 max mem: 2783
+Test Total time: 0:00:05 (5.1506 s / it)
+* Acc@1 67.442 loss 1.045 auroc 0.860 f1_score 0.574
+  per-class F1 (Test): {'benign': np.float32(0.707), 'atypical': np.float32(0.143), 'malignant': np.float32(0.871)}
+  [DIAG] Tier1 сам по собі: acc=67.587 f1_macro=0.565
+
+Epoch: [12] [  0/389] eta: 0:03:42 lr: 0.000021 tier1_loss: 0.0081 (0.0081) tier2_loss: 0.0312 (0.0312) time: 0.5731 data: 0.3891 max mem: 2783
+Epoch: [12] [100/389] eta: 0:00:41 lr: 0.000018 tier1_loss: 0.0137 (0.4466) tier2_loss: 0.0427 (0.5384) time: 0.1624 data: 0.0001 max mem: 2783
+Epoch: [12] [200/389] eta: 0:00:29 lr: 0.000015 tier1_loss: 0.0131 (0.3735) tier2_loss: 0.0387 (0.4699) time: 0.1582 data: 0.0001 max mem: 2783
+Epoch: [12] [300/389] eta: 0:00:13 lr: 0.000013 tier1_loss: 0.0110 (0.3547) tier2_loss: 0.0180 (0.4709) time: 0.1655 data: 0.0001 max mem: 2783
+Epoch: [12] [388/389] eta: 0:00:00 lr: 0.000010 tier1_loss: 0.0158 (0.3491) tier2_loss: 0.0177 (0.4224) time: 0.1749 data: 0.0001 max mem: 2783
+Epoch: [12] Total time: 0:01:01 (61.8756 s / it)
+Val [ 0/62] eta: 0:00:24 loss: 6.0535 (6.0535) acc1: 0.0000 (0.0000) time: 0.3998 data: 0.3375 max mem: 2783
+Val [61/62] eta: 0:00:00 loss: 0.3898 (1.4129) acc1: 0.0000 (64.5161) time: 0.0402 data: 0.0001 max mem: 2783
+Val Total time: 0:00:03 (3.7739 s / it)
+* Acc@1 64.516 loss 1.413 auroc 0.781 f1_score 0.554
+  per-class F1 (Val): {'benign': np.float32(0.764), 'atypical': np.float32(0.19), 'malignant': np.float32(0.708)}
+  [DIAG] Tier1 сам по собі: acc=70.363 f1_macro=0.588
+Test [ 0/86] eta: 0:00:29 loss: 0.0710 (0.0710) acc1: 100.0000 (100.0000) time: 0.3488 data: 0.2767 max mem: 2783
+Test [85/86] eta: 0:00:00 loss: 0.0390 (0.8823) acc1: 100.0000 (77.9070) time: 0.0395 data: 0.0001 max mem: 2783
+Test Total time: 0:00:04 (4.7320 s / it)
+* Acc@1 77.907 loss 0.882 auroc 0.860 f1_score 0.755
+  per-class F1 (Test): {'benign': np.float32(0.806), 'atypical': np.float32(0.585), 'malignant': np.float32(0.875)}
+  [DIAG] Tier1 сам по собі: acc=72.965 f1_macro=0.680
+
+Epoch: [13] [  0/389] eta: 0:04:32 lr: 0.000010 tier1_loss: 0.0060 (0.0060) tier2_loss: 0.0172 (0.0172) time: 0.7017 data: 0.4146 max mem: 2783
+Epoch: [13] [100/389] eta: 0:00:49 lr: 0.000008 tier1_loss: 0.0126 (0.4419) tier2_loss: 0.0300 (0.6195) time: 0.1773 data: 0.0001 max mem: 2783
+Epoch: [13] [200/389] eta: 0:00:31 lr: 0.000006 tier1_loss: 0.0107 (0.3456) tier2_loss: 0.0105 (0.4754) time: 0.1518 data: 0.0001 max mem: 2783
+Epoch: [13] [300/389] eta: 0:00:14 lr: 0.000005 tier1_loss: 0.0146 (0.3386) tier2_loss: 0.0079 (0.4505) time: 0.1604 data: 0.0001 max mem: 2783
+Epoch: [13] [388/389] eta: 0:00:00 lr: 0.000003 tier1_loss: 0.0097 (0.3206) tier2_loss: 0.0090 (0.4294) time: 0.1628 data: 0.0001 max mem: 2783
+Epoch: [13] Total time: 0:01:03 (63.9326 s / it)
+Val [ 0/62] eta: 0:00:24 loss: 4.5128 (4.5128) acc1: 0.0000 (0.0000) time: 0.4014 data: 0.3515 max mem: 2783
+Val [61/62] eta: 0:00:00 loss: 0.0396 (1.4434) acc1: 100.0000 (69.3548) time: 0.0405 data: 0.0001 max mem: 2783
+Val Total time: 0:00:03 (3.6127 s / it)
+* Acc@1 69.355 loss 1.443 auroc 0.804 f1_score 0.586
+  per-class F1 (Val): {'benign': np.float32(0.8), 'atypical': np.float32(0.235), 'malignant': np.float32(0.723)}
+  [DIAG] Tier1 сам по собі: acc=70.766 f1_macro=0.595
+Test [ 0/86] eta: 0:00:30 loss: 0.0212 (0.0212) acc1: 100.0000 (100.0000) time: 0.3572 data: 0.2921 max mem: 2783
+Test [85/86] eta: 0:00:00 loss: 0.0441 (1.0210) acc1: 100.0000 (73.2558) time: 0.0397 data: 0.0001 max mem: 2783
+Test Total time: 0:00:04 (4.7553 s / it)
+* Acc@1 73.256 loss 1.021 auroc 0.864 f1_score 0.690
+  per-class F1 (Test): {'benign': np.float32(0.767), 'atypical': np.float32(0.444), 'malignant': np.float32(0.857)}
+  [DIAG] Tier1 сам по собі: acc=69.767 f1_macro=0.615
+
+Epoch: [14] [  0/389] eta: 0:03:24 lr: 0.000003 tier1_loss: 0.0070 (0.0070) tier2_loss: 0.0092 (0.0092) time: 0.5252 data: 0.2966 max mem: 2783
+Epoch: [14] [100/389] eta: 0:00:44 lr: 0.000002 tier1_loss: 0.0073 (0.1770) tier2_loss: 0.0090 (0.1996) time: 0.1597 data: 0.0001 max mem: 2783
+Epoch: [14] [200/389] eta: 0:00:30 lr: 0.000002 tier1_loss: 0.0042 (0.2040) tier2_loss: 0.0080 (0.2306) time: 0.1633 data: 0.0001 max mem: 2783
+Epoch: [14] [300/389] eta: 0:00:14 lr: 0.000001 tier1_loss: 0.0185 (0.2595) tier2_loss: 0.0163 (0.3110) time: 0.1675 data: 0.0001 max mem: 2783
+Epoch: [14] [388/389] eta: 0:00:00 lr: 0.000001 tier1_loss: 0.0095 (0.2944) tier2_loss: 0.0131 (0.3811) time: 0.1598 data: 0.0001 max mem: 2783
+Epoch: [14] Total time: 0:01:03 (63.8251 s / it)
+Val [ 0/62] eta: 0:00:22 loss: 3.8245 (3.8245) acc1: 0.0000 (0.0000) time: 0.3561 data: 0.3121 max mem: 2783
+Val [61/62] eta: 0:00:00 loss: 0.0442 (1.3855) acc1: 100.0000 (69.3548) time: 0.0391 data: 0.0001 max mem: 2783
+Val Total time: 0:00:03 (3.7193 s / it)
+* Acc@1 69.355 loss 1.385 auroc 0.801 f1_score 0.586
+  per-class F1 (Val): {'benign': np.float32(0.814), 'atypical': np.float32(0.222), 'malignant': np.float32(0.723)}
+  [DIAG] Tier1 сам по собі: acc=70.968 f1_macro=0.603
+wandb: 
+wandb: Run history:
+wandb: diag/test_tier1_acc ▁▂▃▆▅▄▅▆▇▅▅▆█▇▇
+wandb:  diag/test_tier1_f1 ▁▁▂▄▃▃▃▄▄▄▅▅█▆▇
+wandb:       perf/test_auc ▃▃▂▆▂▁▄▅▆▅▆████
+wandb:        perf/test_f1 ▁▂▁▃▃▂▃▃▃▃▃▄█▇▇
+wandb:        perf/val_auc ▅▆▁▅▆▄▁▃▅▅██▅▆▆
+wandb:         perf/val_f1 ▁▁▃▃▂▂▂▂▃▂█▅▄▄▄
+wandb:          tier1_loss ▃▃▂▁▁▁█▁▂▁▆▁▁▁▁▁▁▆▁▁▆▁▁▂▁▁▁▁▁▁▁▄▁▁▁▁▁▁▂▁
+wandb:          tier2_loss ▂▂▁▁▁▁▁▁▂▁▃▁▆▁▁▁▁▁▁▁▁▂▁▁▁█▁▁█▁▁▁▂▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb: diag/test_tier1_acc 70.20349
+wandb:  diag/test_tier1_f1 0.62884
+wandb:       perf/test_auc 0.86509
+wandb:        perf/test_f1 0.68866
+wandb:        perf/val_auc 0.80112
+wandb:         perf/val_f1 0.5864
+wandb:          tier1_loss 0.03589
+wandb:          tier2_loss 0.01441
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /data/bohatyrenko1/EXPERIMENTS_2/Hi-MoE_MIL/wandb/offline-run-20260927_160416-3xkvi13p
+wandb: Find logs at: ./wandb/offline-run-20260927_160416-3xkvi13p/logs
+Test [ 0/86] eta: 0:00:26 loss: 0.0240 (0.0240) acc1: 100.0000 (100.0000) time: 0.3131 data: 0.2695 max mem: 2783
+Test [85/86] eta: 0:00:00 loss: 0.0389 (0.9737) acc1: 100.0000 (73.2558) time: 0.0414 data: 0.0001 max mem: 2783
+Test Total time: 0:00:04 (4.8471 s / it)
+* Acc@1 73.256 loss 0.974 auroc 0.865 f1_score 0.689
+  per-class F1 (Test): {'benign': np.float32(0.778), 'atypical': np.float32(0.444), 'malignant': np.float32(0.844)}
+  [DIAG] Tier1 сам по собі: acc=70.203 f1_macro=0.629
+
+============================================================
+FINAL EPOCH (14) RESULTS (DTFD-ASMIL v2):
+  test_auc=0.8651 test_acc=73.26 test_f1(macro)=0.6887
+  [DIAG] Tier1 сам по собі: acc=70.203 f1_macro=0.629
+  test per-class F1: {'benign': np.float32(0.778), 'atypical': np.float32(0.444), 'malignant': np.float32(0.844)}
+  test confusion matrix (rows=true, cols=pred):
+            benign    atypical   malignant
+  benign         28           2           1
+atypical         11           8           4
+malignant          2           3          27
+============================================================
+Best epoch: {'epoch': 10, 'val_f1': 0.7226946949958801, 'val_auc': 0.842495322227478, 'test_f1': 0.5140380859375, 'test_auc': 0.8234566450119019}
